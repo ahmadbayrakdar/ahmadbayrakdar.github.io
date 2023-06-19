@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "./static/css/main.1ca60866.css",
+    "main.js": "./static/js/main.1336530c.js",
+    "static/js/787.98093fa4.chunk.js": "./static/js/787.98093fa4.chunk.js",
+    "static/media/Blocked_Trefoil_Tee_Black_GR9740_21_model_2048x2048.jpg": "./static/media/Blocked_Trefoil_Tee_Black_GR9740_21_model_2048x2048.23bbbdcfe83f839009b9.jpg",
+    "static/media/Group 356@2x.png": "./static/media/Group 356@2x.7b266500a8fa287ad178.png",
+    "static/media/Group 354@2x.png": "./static/media/Group 354@2x.2156f63d626028ec203a.png",
+    "static/media/Group 333.png": "./static/media/Group 333.e354c594db9e6ed01c55.png",
+    "static/media/Group 331.png": "./static/media/Group 331.522cad545be1d70b3941.png",
+    "static/media/Group 335.png": "./static/media/Group 335.abc087e0e6efa28b253a.png",
+    "static/media/Group 329.png": "./static/media/Group 329.4dcf49a9bdc4d15b4edd.png",
+    "index.html": "/index.html",
+    "static/media/starFilled.svg": "./static/media/starFilled.a57746a230bea1dfd072f04fb952bd1d.svg",
+    "static/media/starOutline.svg": "./static/media/starOutline.d4dacc143104cf8a311e5fe998e5b721.svg",
+    "static/media/Path 774.svg": "./static/media/Path 774.542c6e40fd1bb4c5f72f.svg",
+    "main.1ca60866.css.map": "./static/css/main.1ca60866.css.map",
+    "main.1336530c.js.map": "./static/js/main.1336530c.js.map",
+    "787.98093fa4.chunk.js.map": "./static/js/787.98093fa4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1ca60866.css",
+    "static/js/main.1336530c.js"
+  ]
+}
