@@ -337,7 +337,7 @@ html, body{
         align-items: center;
     }
     .siteContainer .developedBy{
-        /* position: unset; */
+        position: unset;
         margin-top: 25px;
         width: 100%;
         left: 0;
