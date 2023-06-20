@@ -55,7 +55,7 @@ html, body{
     background-size: cover;
     padding: 100px 125px;
     font-family: Arial, Helvetica, sans-serif;
-    overflow: hidden;
+    overflow: visible;
     position: relative;
     background-position-x: center;
 }
@@ -63,7 +63,7 @@ html, body{
     font-size: 12px;
     color: var(--bright);
     position: absolute;
-    bottom: 100px;
+    top: calc(100vh - 100px);
     left: 125px;
 }
 /* site scontainer end */
@@ -298,7 +298,7 @@ html, body{
         padding: 75px;
     }
     .siteContainer .developedBy{
-        bottom: 75px;
+        top: calc(100vh - 75px);
         left: 75px;
     }
 }
@@ -307,7 +307,7 @@ html, body{
         padding: 35px;
     }
     .siteContainer .developedBy{
-        bottom: 35px;
+        top: calc(100vh - 75px);
         left: 35px;
     }
 }
