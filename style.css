@@ -307,7 +307,7 @@ html, body{
         padding: 35px;
     }
     .siteContainer .developedBy{
-        top: calc(100vh - 75px);
+        top: calc(100vh - 115px);
         left: 35px;
     }
 }
