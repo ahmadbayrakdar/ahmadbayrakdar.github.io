@@ -45,7 +45,7 @@
 /* html and body start */
 html, body{
     background-color: var(--bright);
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 /* html and body end */
 /* site scontainer start */
