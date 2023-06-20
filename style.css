@@ -415,12 +415,12 @@ html, body{
     background-position:
       0 100%,
       /* 50% -20%, */
-      0 100%,
+      0 80%,
       0 100%,
       0 0;
     background-size:
       2500px,
-      1000px,
+      1400px,
       cover,
       cover,
       cover;
