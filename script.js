@@ -129,3 +129,21 @@ function mouseMovement(e) {
 // Attach the mouse movement event listener.
 document.addEventListener("mousemove", mouseMovement);
 // mouse movement light effect end
+// autoplay audio start
+$(document).ready(() => {
+  function anyWhereUsersFirstClick() {
+      console.log('clicked');
+      const audio = document.getElementById("myAudio");
+      const playPromise = audio.play();
+      playPromise.then(() => {
+        // The audio file has started playing.
+        console.log('playing')
+      }, (error) => {
+        // There was an error playing the audio file.
+        console.log(error)
+      });
+      $(document).off("click", anyWhereUsersFirstClick);
+    }
+    $(document).on("click", anyWhereUsersFirstClick);
+  });
+// autoplay audio end

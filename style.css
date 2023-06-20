@@ -46,6 +46,7 @@
 html, body{
     background-color: var(--bright);
     overflow: hidden;
+    height: 100%;
 }
 /* html and body end */
 /* site scontainer start */
@@ -72,6 +73,10 @@ html, body{
 .siteContainer .tabContainer{
     justify-content: space-between;
     display: none;
+    flex-direction: row-reverse;
+}
+.siteContainer .tabContainer:not(#tabContent04){
+    margin-top: 50px;
 }
 .siteContainer .tabContainer#tabContent04{
     justify-content: center;
@@ -103,7 +108,7 @@ html, body{
     /* max-width: 300px; */
     color: var(--bright);
     justify-content: space-between;
-    background: var(--gradientTrasnparent);
+    /* background: var(--gradientTrasnparent); */
     /* border-radius: 5px; */
     scroll-behavior: smooth;
     scrollbar-width: thin;
@@ -308,7 +313,7 @@ html, body{
         padding: 35px;
     }
     .siteContainer .developedBy{
-        top: calc(100vh - 115px);
+        /* top: calc(100vh - 115px); */
         left: 35px;
     }
 }
@@ -316,8 +321,16 @@ html, body{
     .siteContainer{
         background-position-x: 30%;
     }
+    .siteContainer .developedBy{
+        width: 100%;
+        left: 0;
+        text-align: center;
+        padding-top: 20px;
+    }
     .siteContainer .tabContainer{
         flex-direction: column;
+        flex-direction: column-reverse;
+        align-items: center;
     }
     .siteContainer .tabContainer .siteLeftSide{
         margin-bottom: 50px;
@@ -347,6 +360,8 @@ html, body{
     .siteContainer .tabContainer{
         text-align: center;
         align-items: center;
+        flex-direction: column-reverse;
+        margin-top: 15px;
     }
     .siteContainer .tabContainer .yearsExperience{
         justify-content: center;
@@ -367,8 +382,11 @@ html, body{
         color: #fff;
         background-color: unset;
     }
+    .siteContainer .tabContainer .secondInfo{
+        margin-top: 0;
+    }
     .siteContainer .tabContainer .siteLeftSide{
-        margin-bottom: 25px;
+        margin-bottom: 0;
     }
     .siteContainer .pictureOnMobile{
         display: block;
