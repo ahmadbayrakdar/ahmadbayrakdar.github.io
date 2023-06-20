@@ -170,7 +170,7 @@ html, body{
 .siteContainer .tabContainer .secondInfo a.downloadResume.codepen,
 .siteContainer .tabContainer .secondInfo a.downloadResume:active.codepen,
 .siteContainer .tabContainer .secondInfo a.downloadResume:visited.codepen{
-    color: #000000;
+    color: var(--bright);
 }
 .siteContainer .tabContainer .secondInfo .websiteScreenshot{
     width: 130px;
@@ -387,6 +387,7 @@ html, body{
     }
     .siteContainer .tabContainer .siteLeftSide{
         margin-bottom: 0;
+        margin-top: 25px;
     }
     .siteContainer .pictureOnMobile{
         display: block;
