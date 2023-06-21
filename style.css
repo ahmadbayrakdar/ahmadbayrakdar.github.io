@@ -535,7 +535,7 @@ html, body{
 /* #popupOnStart .button.clickedButton{
     overflow: hidden;
 } */
-#popupOnStart .button::after{
+#popupOnStart .button .textGlowed{
     content: 'START';
     position: absolute;
     width: 100%;
@@ -547,6 +547,7 @@ html, body{
     align-items: center;
     pointer-events: none;
     transition: all 0.3s ease-in-out;
+    font-size: 22px;
 }
 #popupOnStart .buttonEffect{
     position: absolute;
@@ -573,7 +574,7 @@ html, body{
     width: 100%;
     height: 100%;
 }
-#popupOnStart .button.clickedButton .front, #popupOnStart .button.clickedButton::after{
+#popupOnStart .button.clickedButton .front, #popupOnStart .button.clickedButton .textGlowed{
     transform: translate3d(-27px, 20px, 0) scale(0.95);
 }
 #popupOnStart .shadow{
@@ -610,7 +611,7 @@ html, body{
         box-shadow: 0 0 15px var(--highlightColor), 0 0 20px var(--highlightColor);
     }
 }
-#popupOnStart .button::after{
+#popupOnStart .button .textGlowed{
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
     animation: glowing 1s infinite;
 }
