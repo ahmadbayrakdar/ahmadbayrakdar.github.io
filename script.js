@@ -94,7 +94,7 @@ var projectsScrollValue = 0;
 var projectsElement = document.getElementById('projectsScroll');
 function changeSection(event){
   projectsScrollValue = projectsElement.scrollTop;
-  console.log('Scroll value:', projectsScrollValue);
+  // console.log('Scroll value:', projectsScrollValue);
   if ((event.originalEvent.deltaY > 0  || event.which == 39) && scrollValue < 3) {
       // Scrolling down
       scrollValue++;
@@ -138,15 +138,15 @@ document.addEventListener("mousemove", mouseMovement);
 // autoplay audio start
 
 function anyWhereUsersFirstClick() {
-  console.log('clicked');
+  // console.log('clicked');
   const audio = document.getElementById("myAudio");
   const playPromise = audio.play();
   playPromise.then(() => {
     // The audio file has started playing.
-    console.log('playing')
+    // console.log('playing')
   }, (error) => {
     // There was an error playing the audio file.
-    console.log(error)
+    // console.log(error)
   });
 }
 // autoplay audio end
