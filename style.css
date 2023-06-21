@@ -123,6 +123,9 @@ html, body{
     /* border-radius: 5px; */
 
 }
+.siteContainer .tabContainer .skillsTitle{
+    padding-top: 25px;
+}
 .siteContainer .tabContainer .yearsExperience{
     /* max-width: 300px; */
     color: var(--bright);
@@ -509,6 +512,14 @@ html, body{
     justify-content: center;
     align-items: center;
     color: var(--bright);
+    flex-direction: column;
+}
+#popupOnStart .portfolioIntro{
+    position: absolute;
+    /* padding: 100px 0 20px 0; */
+    top: 100px;
+    text-align: start;
+    /* right: 125px; */
 }
 #popupOnStart.hidePopup{
     pointer-events: none;
@@ -601,15 +612,15 @@ html, body{
 @keyframes light-filter {
     0% {
         filter: brightness(1.5) hue-rotate(30deg);
-        box-shadow: 0 0 15px var(--highlightColor), 0 0 20px var(--highlightColor);
+        box-shadow: 0 0 15px var(--mainColor), 0 0 20px var(--mainColor), 0 0 300px var(--mainColor);
     }
     50% {
         filter: brightness(1) hue-rotate(0deg);
-        box-shadow: 0 0 15px var(--hoverColor), 0 0 20px var(--hoverColor);
+        box-shadow: 0 0 15px var(--hoverColor), 0 0 20px var(--hoverColor), 0 0 300px var(--hoverColor);
     }
     100% {
         filter: brightness(1.5) hue-rotate(30deg);
-        box-shadow: 0 0 15px var(--highlightColor), 0 0 20px var(--highlightColor);
+        box-shadow: 0 0 15px var(--mainColor), 0 0 20px var(--mainColor), 0 0 300px var(--mainColor);
     }
 }
 #popupOnStart .button .textGlowed{
