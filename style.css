@@ -177,6 +177,7 @@ html, body{
 .siteContainer .tabContainer .secondInfo a.downloadResume:active.pdf,
 .siteContainer .tabContainer .secondInfo a.downloadResume:visited.pdf{
     color: #f40f02;
+    text-shadow: 0 0 10px #58002b, 0 0 5px #58002b, 0 0 30px #58002b;
 }
 .siteContainer .tabContainer .secondInfo a.downloadResume.word,
 .siteContainer .tabContainer .secondInfo a.downloadResume:active.word,
@@ -187,21 +188,56 @@ html, body{
 .siteContainer .tabContainer .secondInfo a.downloadResume:active.github,
 .siteContainer .tabContainer .secondInfo a.downloadResume:visited.github{
     color: #2DBA4E;
+    text-shadow: 0 0 10px #309147, 0 0 5px #309147, 0 0 30px #309147;
 }
 .siteContainer .tabContainer .secondInfo a.downloadResume.linkedin,
 .siteContainer .tabContainer .secondInfo a.downloadResume:active.linkedin,
 .siteContainer .tabContainer .secondInfo a.downloadResume:visited.linkedin{
     color: #0E76A8;
+    text-shadow: 0 0 10px #6dd0ff, 0 0 5px #6dd0ff, 0 0 30px #6dd0ff;
 }
 .siteContainer .tabContainer .secondInfo a.downloadResume.facebook,
 .siteContainer .tabContainer .secondInfo a.downloadResume:active.facebook,
 .siteContainer .tabContainer .secondInfo a.downloadResume:visited.facebook{
     color: #3B5998;
+    text-shadow: 0 0 10px #7da6ff, 0 0 5px #7da6ff, 0 0 30px #7da6ff;
 }
 .siteContainer .tabContainer .secondInfo a.downloadResume.codepen,
 .siteContainer .tabContainer .secondInfo a.downloadResume:active.codepen,
 .siteContainer .tabContainer .secondInfo a.downloadResume:visited.codepen{
-    color: var(--bright);
+    color: #ffffff;
+    text-shadow: 0 0 10px #aeaeae, 0 0 5px #aeaeae, 0 0 30px #aeaeae;
+}
+.siteContainer .tabContainer .secondInfo a.downloadResume.projectLink:nth-of-type(1) .websiteScreenshot img,
+.siteContainer .tabContainer .secondInfo a.downloadResume:active.projectLink:nth-of-type(1) .websiteScreenshot img,
+.siteContainer .tabContainer .secondInfo a.downloadResume:visited.projectLink:nth-of-type(1) .websiteScreenshot img{
+    box-shadow: 0 0 25px #a61e22;
+}
+.siteContainer .tabContainer .secondInfo a.downloadResume.projectLink:nth-of-type(2) .websiteScreenshot img,
+.siteContainer .tabContainer .secondInfo a.downloadResume:active.projectLink:nth-of-type(2) .websiteScreenshot img,
+.siteContainer .tabContainer .secondInfo a.downloadResume:visited.projectLink:nth-of-type(2) .websiteScreenshot img{
+    box-shadow: 0 0 25px #7b4c90;
+}
+.siteContainer .tabContainer .secondInfo a.downloadResume.projectLink:nth-of-type(3) .websiteScreenshot img,
+.siteContainer .tabContainer .secondInfo a.downloadResume:active.projectLink:nth-of-type(3) .websiteScreenshot img,
+.siteContainer .tabContainer .secondInfo a.downloadResume:visited.projectLink:nth-of-type(3) .websiteScreenshot img{
+    box-shadow: 0 0 25px #2cafff;
+}
+.siteContainer .tabContainer .secondInfo a.downloadResume.projectLink:nth-of-type(4) .websiteScreenshot img,
+.siteContainer .tabContainer .secondInfo a.downloadResume:active.projectLink:nth-of-type(4) .websiteScreenshot img,
+.siteContainer .tabContainer .secondInfo a.downloadResume:visited.projectLink:nth-of-type(4) .websiteScreenshot img{
+    box-shadow: 0 0 25px #1652aa;
+}
+.siteContainer .tabContainer .secondInfo a.downloadResume.projectLink:nth-of-type(5) .websiteScreenshot img,
+.siteContainer .tabContainer .secondInfo a.downloadResume:active.projectLink:nth-of-type(5) .websiteScreenshot img,
+.siteContainer .tabContainer .secondInfo a.downloadResume:visited.projectLink:nth-of-type(5) .websiteScreenshot img{
+    box-shadow: 0 0 25px #fbf138;
+}
+/* .siteContainer .tabContainer .secondInfo a.downloadResume.projectLink .websiteTitle{ */
+    /* transition: 2s all ease-in-out; */
+/* } */
+.siteContainer .tabContainer .secondInfo a.downloadResume:hover.projectLink .websiteTitle{
+    transform: translate(10px, -10px);
 }
 .siteContainer .tabContainer .secondInfo .websiteScreenshot{
     width: 130px;
@@ -212,7 +248,7 @@ html, body{
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
-    /* border: solid 3px var(--bright); */
+    /* border: solid 10px var(--bright); */
 }
 .siteContainer .tabContainer .secondInfo a.downloadResume span{
     font-size: 27px;
@@ -228,9 +264,9 @@ html, body{
 .siteContainer .tabContainer .secondInfo a.downloadResume:hover .websiteScreenshot img{
     border-color: var(--mainColor);
 }
-.siteContainer .tabContainer .secondInfo a.downloadResume:hover .websiteTitle{
+/* .siteContainer .tabContainer .secondInfo a.downloadResume:hover .websiteTitle{
     color: var(--mainColor);
-}
+} */
 .siteContainer .tabContainer .secondInfo{
     margin-top: 30px;
 }
@@ -421,7 +457,7 @@ html, body{
     .siteContainer .tabContainer .secondInfo{
         margin-top: 0;
     }
-    .siteContainer .tabContainer .siteLeftSide{
+    .siteContainer .tabContainer .siteLeftSide:not(.contactSide){
         margin-bottom: 0;
         margin-top: 10px;
         overflow: scroll;
@@ -501,10 +537,10 @@ html, body{
 /* light effect start */
 .lightEffect{
     position: fixed;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     /* z-index: 1; */
-    background-color: var(--backgroundColor);
+    /* background-color: var(--backgroundColor); */
     margin-left: -100px;
     margin-top: -100px;
     border-radius: 50%;
@@ -554,6 +590,9 @@ html, body{
     outline: none;
     -webkit-tap-highlight-color: transparent;
     user-select: none;
+}
+#popupOnStart .button:hover{
+    transform: rotate3d(2, 2, 2, -55deg);
 }
 /* #popupOnStart .button:active{
     transform: scale(3)
@@ -677,3 +716,16 @@ html, body{
     }
 }
 /* handle fontsize on small screens end */
+/* cool hover transitions start */
+.downloadResume{
+    transition: 0.7s all ease-out;
+}
+.downloadResume:hover{
+    transform: rotate3d(-1, -1, -1, 5deg) scale(1.3);
+}
+/* cool hover transitions end */
+/* select filter for text start */
+.fullName, .mainInfo {
+    filter: hue-rotate(160deg);
+}
+/* select filter for text end */
