@@ -92,20 +92,26 @@ function triggerButtonClickOnScroll() {
 }
 var projectsScrollValue = 0;
 var projectsElement = document.getElementById('projectsScroll');
-
+function changeSection(event){
+  projectsScrollValue = projectsElement.scrollTop;
+  console.log('Scroll value:', projectsScrollValue);
+  if ((event.originalEvent.deltaY > 0  || event.which == 39) && scrollValue < 3) {
+      // Scrolling down
+      scrollValue++;
+      // Additional code for scrolling down
+  } else if((event.originalEvent.deltaY < 3 && projectsScrollValue == 0 || event.which == 37) && scrollValue > 0){
+      // Scrolling up
+      scrollValue--;
+      // Additional code for scrolling up
+  }
+}
 $(window).on('wheel', function(event) {
-    projectsScrollValue = projectsElement.scrollTop;
-    console.log('Scroll value:', projectsScrollValue);
-    if (event.originalEvent.deltaY > 0 && scrollValue < 3) {
-        // Scrolling down
-        scrollValue++;
-        // Additional code for scrolling down
-    } else if(event.originalEvent.deltaY < 3 && scrollValue > 0 && projectsScrollValue == 0){
-        // Scrolling up
-        scrollValue--;
-        // Additional code for scrolling up
-    }
+  changeSection(event);
     triggerButtonClickOnScroll();
+});
+$(document).keydown(function(event) {
+  changeSection(event);
+  triggerButtonClickOnScroll();
 });
 // triggering links by scrolling end
 // mouse movement light effect start
