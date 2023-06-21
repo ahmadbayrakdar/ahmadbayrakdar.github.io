@@ -139,6 +139,7 @@ document.addEventListener("mousemove", mouseMovement);
 
 function anyWhereUsersFirstClick() {
   // console.log('clicked');
+  $('.hideThisOnStart').removeClass('hideThisOnStart');
   const audio = document.getElementById("myAudio");
   const playPromise = audio.play();
   playPromise.then(() => {

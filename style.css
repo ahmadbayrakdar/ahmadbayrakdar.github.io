@@ -95,6 +95,9 @@ html, body{
     text-align: center;
     flex-direction: column-reverse;
 }
+.hideThisOnStart{
+    opacity: 0;
+}
 .siteContainer .tabContainer#tabContent04{
     justify-content: center;
 }
