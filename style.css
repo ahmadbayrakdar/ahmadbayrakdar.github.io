@@ -82,7 +82,7 @@ html, body{
     font-size: 14px;
     color: var(--bright);
     position: absolute;
-    top: calc(100vh - 100px);
+    top: calc(100% - 100px);
     left: 125px;
     z-index: 2;
 }
@@ -101,6 +101,7 @@ html, body{
 .siteContainer .tabContainer#tabContent04 .secondInfo{
     overflow: scroll;
     max-height: 60vh;
+    margin: 10px 0;
 }
 /* left side start */
 .siteContainer .tabContainer .siteLeftSide{
@@ -325,7 +326,7 @@ html, body{
         padding: 75px;
     }
     .developedBy{
-        top: calc(100vh - 75px);
+        top: calc(100% - 75px);
         left: 75px;
     }
 }
@@ -334,7 +335,7 @@ html, body{
         padding: 35px;
     }
     .developedBy{
-        /* top: calc(100vh - 115px); */
+        /* top: calc(100% - 115px); */
         left: 35px;
     }
 }
@@ -374,7 +375,7 @@ html, body{
     .developedBy{
         /* position: unset; */
         margin-top: 0;
-        top: calc(100vh - 35px);
+        top: calc(100% - 35px);
         width: 100%;
         left: 0;
         text-align: center;
