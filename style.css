@@ -100,7 +100,7 @@ html, body{
 }
 .siteContainer .tabContainer#tabContent04 .secondInfo{
     overflow: scroll;
-    max-height: 60vh;
+    max-height: 90%;
     margin: 10px 0;
 }
 /* left side start */
