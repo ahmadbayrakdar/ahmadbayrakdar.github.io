@@ -1,9 +1,22 @@
+/* fonts start */
+@font-face {
+    font-family: "Baloo 2";
+    src: url("./fonts/Baloo2-VariableFont_wght.ttf") format("truetype");
+    font-weight: normal;
+font-style: normal;
+}
+/* fonts end */
 /* general start */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     transition: all 0.3s ease-in-out;
+    font-family: "Baloo 2", sans-serif;
+    letter-spacing: 1px;
+}
+*:not(i){
+    font-size: 18px;
 }
 /* general end */
 /* global start */
@@ -17,12 +30,16 @@
     flex-direction: column;
 }
 .rowFlexItem{
-    margin: 10px;
+    margin: 5px;
     padding: 5px;
 }
 .rowFlexItem.mainSkills{
     /* border-radius: 5px; */
     color: var(--lighter);
+}
+strong{
+    font-size: 22px;
+    color: var(--bright);
 }
 /* global end */
 /* template color variables start */
@@ -61,22 +78,22 @@ html, body{
     position: relative;
     background-position-x: center;
 }
-.siteContainer .developedBy{
-    font-size: 12px;
+.developedBy{
+    font-size: 14px;
     color: var(--bright);
     position: absolute;
     top: calc(100vh - 100px);
     left: 125px;
+    z-index: 2;
 }
 /* site scontainer end */
 /* tabs start */
-.siteContainer .tabContainer{
-    justify-content: space-between;
+.tabContainer{
+    justify-content: center;
+    align-items: center;
     display: none;
-    flex-direction: row-reverse;
-}
-.siteContainer .tabContainer:not(#tabContent04){
-    margin-top: 50px;
+    text-align: center;
+    flex-direction: column-reverse;
 }
 .siteContainer .tabContainer#tabContent04{
     justify-content: center;
@@ -90,13 +107,14 @@ html, body{
     height: fit-content;
 }
 .siteContainer .fullName{
+    font-size: 30px;
     text-transform: uppercase;
     color: var(--bright);
 }
 .siteContainer .mainInfo{
     height: 25px;
     min-height: 25px;
-    font-size: 12px;
+    font-size: 14px;
     max-width: fit-content;
     padding: 5px;
     /* border-radius: 5px; */
@@ -124,7 +142,9 @@ html, body{
 .siteContainer .tabContainer#tabContent01 .yearsExperience:first-of-type{
     /* background: var(--transparentBright); */
     /* border-radius: 5px; */
-    color: var(--highlightColor)
+    color: var(--bright);
+    background-color: #0000008b;
+    border-radius: 50px;
 }
 .siteContainer .tabContainer .secondInfo .resumeWord{
     display: flex;
@@ -184,8 +204,9 @@ html, body{
     /* border: solid 3px var(--bright); */
 }
 .siteContainer .tabContainer .secondInfo a.downloadResume span{
-    font-size: 20px;
+    font-size: 27px;
     width: fit-content;
+    font-weight: bold;
 }
 .siteContainer .tabContainer .secondInfo .websiteTitle{
     font-size: 15px;
@@ -221,7 +242,7 @@ html, body{
 /* small face image end */
 /* right side start */
 .siteContainer .tabContainer .siteRightSide{
-    max-width: 25vw;
+    /* max-width: 25vw; */
     color: var(--bright);
 }
 .siteContainer .tabContainer .siteRightSide .myArtLogo{
@@ -251,7 +272,7 @@ html, body{
     max-width: 15vw;
     float: right;
     margin-top: 1rem;
-    font-size: 12px;
+    font-size: 14px;
 }
 /* right side end */
 /* tabs end */
@@ -303,7 +324,7 @@ html, body{
     .siteContainer{
         padding: 75px;
     }
-    .siteContainer .developedBy{
+    .developedBy{
         top: calc(100vh - 75px);
         left: 75px;
     }
@@ -312,7 +333,7 @@ html, body{
     .siteContainer{
         padding: 35px;
     }
-    .siteContainer .developedBy{
+    .developedBy{
         /* top: calc(100vh - 115px); */
         left: 35px;
     }
@@ -321,11 +342,11 @@ html, body{
     .siteContainer{
         background-position-x: 30%;
     }
-    .siteContainer .developedBy{
+    .developedBy{
         width: 100%;
         left: 0;
         text-align: center;
-        padding-top: 20px;
+        /* padding-top: 20px; */
     }
     .siteContainer .tabContainer{
         flex-direction: column;
@@ -336,7 +357,7 @@ html, body{
         margin-bottom: 50px;
     }
     .siteContainer .tabContainer .siteRightSide{
-        max-width: 300px;
+        /* max-width: 300px; */
     }
     .siteContainer .tabContainer .siteRightSide .rightSpecialites{
         max-width: unset;
@@ -350,9 +371,10 @@ html, body{
         padding-top: 85px;
         align-items: center;
     }
-    .siteContainer .developedBy{
-        position: unset;
-        margin-top: 25px;
+    .developedBy{
+        /* position: unset; */
+        margin-top: 0;
+        top: calc(100vh - 35px);
         width: 100%;
         left: 0;
         text-align: center;
@@ -362,9 +384,6 @@ html, body{
         align-items: center;
         flex-direction: column-reverse;
         margin-top: 15px;
-    }
-    .siteContainer .tabContainer .yearsExperience{
-        justify-content: center;
     }
     .hoverBarContainer{
         top: 25px;
@@ -387,7 +406,7 @@ html, body{
     }
     .siteContainer .tabContainer .siteLeftSide{
         margin-bottom: 0;
-        margin-top: 25px;
+        margin-top: 10px;
     }
     .siteContainer .pictureOnMobile{
         display: block;
@@ -424,7 +443,7 @@ html, body{
       cover,
       cover,
       cover;
-    animation: 50s para infinite linear;
+    animation: 50s para infinite linear, 10s hueBackground infinite linear;
     }
 
   @keyframes para {
@@ -436,6 +455,17 @@ html, body{
         1000px 100%,
         400px 0;
       }
+    }
+    @keyframes hueBackground {
+        0%{
+            filter: hue-rotate(0deg);
+        }
+        50%{
+            filter: hue-rotate(360deg);
+        }
+        0%{
+            filter: hue-rotate(0deg);
+        }
     }
 /* main background end */
 /* typing animation start */
@@ -467,3 +497,132 @@ html, body{
     filter: blur(10px);
 }
 /* light effect end */
+/* popup onstart start */
+#popupOnStart{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: var(--backgroundColor);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--bright);
+}
+#popupOnStart.hidePopup{
+    pointer-events: none;
+    opacity: 0;
+}
+#popupOnStart .button{
+    background-color: #0000;
+    border: none;
+    color: var(--bright);
+    font-size: 35px;
+    transform: rotate3d(1, 1, 1, -72deg);
+    width: 200px;
+    height: 100px;
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+/* #popupOnStart .button:active{
+    transform: scale(3)
+} */
+/* #popupOnStart .button.clickedButton{
+    overflow: hidden;
+} */
+#popupOnStart .button::after{
+    content: 'START';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+}
+#popupOnStart .buttonEffect{
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+    opacity: 0.3;
+    border-radius: 25px;
+}
+#popupOnStart .buttonEffect:hover{
+    width: 105%;
+    height: 105%;
+    top: -2.5%;
+    left: -2.5%;
+}
+#popupOnStart .buttonEffect:hover:not(.edge){
+    filter: hue-rotate(70deg) !important;
+    opacity: 0.5;
+}
+#popupOnStart .front{
+    background-color: var(--mainColor);
+    box-shadow: 0 0 15px var(--mainColor);
+    width: 100%;
+    height: 100%;
+}
+#popupOnStart .button.clickedButton .front, #popupOnStart .button.clickedButton::after{
+    transform: translate3d(-27px, 20px, 0) scale(0.95);
+}
+#popupOnStart .shadow{
+    background-color: var(--hoverColor);
+    box-shadow: 0 0 15px var(--hoverColor);
+    transform: translate3d(-40px, 30px, 0);
+    width: 100%;
+    height: 100%;
+}
+#popupOnStart .edge{
+    background-color: var(--transparentMain);
+    box-shadow: 0 0 15px var(--transparentMain);
+    transform: translate3d(-60px, 60px, 0);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.buttonEffect {
+    filter: brightness(1.5) hue-rotate(30deg);
+    animation: light-filter 1s infinite;
+}
+
+@keyframes light-filter {
+    0% {
+        filter: brightness(1.5) hue-rotate(30deg);
+        box-shadow: 0 0 15px var(--highlightColor), 0 0 20px var(--highlightColor);
+    }
+    50% {
+        filter: brightness(1) hue-rotate(0deg);
+        box-shadow: 0 0 15px var(--hoverColor), 0 0 20px var(--hoverColor);
+    }
+    100% {
+        filter: brightness(1.5) hue-rotate(30deg);
+        box-shadow: 0 0 15px var(--highlightColor), 0 0 20px var(--highlightColor);
+    }
+}
+#popupOnStart .button::after{
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+    animation: glowing 1s infinite;
+}
+@keyframes glowing {
+    0% {
+        text-shadow: 0 0 10px #fff, 0 0 30px #fff, 0 0 30px #fff;
+    }
+    50% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 10px #fff;
+    }
+    100% {
+        text-shadow: 0 0 10px #fff, 0 0 30px #fff, 0 0 30px #fff;
+    }
+}
+/* popup onstart end */
