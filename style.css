@@ -635,7 +635,7 @@ html, body{
     filter: hue-rotate(70deg) !important;
 }
 #popupOnStart .front{
-    background-color: #00000089;
+    background-color: #000000ad;
     box-shadow: 0 0 10px var(--mainColor), 0 0 50px var(--mainColor);
     box-shadow: 0 0 15px var(--mainColor);
     width: 100%;
