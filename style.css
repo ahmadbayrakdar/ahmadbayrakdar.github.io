@@ -61,7 +61,7 @@ strong{
 /* template color variables end */
 /* html and body start */
 html, body{
-    background-color: var(--bright);
+    background-color: var(--backgroundColor);
     /* overflow: hidden; */
     height: 100%;
 }
