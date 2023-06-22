@@ -436,7 +436,7 @@ html, body{
         margin-top: 85px;
         flex-wrap: nowrap;
         height: calc(100vh - 200px);
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
     .hoverBarContainer{
         top: 25px;
@@ -449,6 +449,7 @@ html, body{
     .hoverBarContainer .hoverBarBody .tabLink{
         padding: 10px;
         height: unset;
+        font-size: 13px;
     }
     .hoverBarContainer .hoverBarBody .tabLink:hover{
         color: #fff;
@@ -458,7 +459,7 @@ html, body{
         margin-top: 0;
     }
     .siteContainer .tabContainer .siteLeftSide:not(.contactSide){
-        margin-bottom: 0;
+        margin-bottom: 15;
         margin-top: 10px;
         overflow: scroll;
     }
@@ -695,16 +696,16 @@ html, body{
 /* handle fontsize on small screens start */
 
 @media only screen and (max-width: 560px){
-    *:not(i){
+    /* *:not(i){
         font-size: 15px;
-    }
-    strong{
+    } */
+    /* strong{
         font-size: 17px;
         color: var(--bright);
-    }
-    .siteContainer .fullName{
+    } */
+    /* .siteContainer .fullName{
         font-size: 25px;
-    }
+    } */
     .siteContainer .tabContainer .yearsExperience{
         justify-content: center;
     }
