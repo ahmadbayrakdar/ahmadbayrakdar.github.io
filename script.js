@@ -58,7 +58,7 @@ if(currentYear > 2020){
 experienceElement.textContent = yearsOfExperience + '+ yrs';
 // dynamic years of experience end
 // triggering links by scrolling start
-var scrollValue = 0;
+var scrollValue = 3;
 function triggerButtonClickOnScroll() {
     // Define the scroll positions at which to trigger the button clicks
     const scrollPositions = [0, 1, 2, 3];
