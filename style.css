@@ -608,6 +608,14 @@ html, body{
     #popupOnStart .buttonEffect:hover:not(.edge){
         filter: hue-rotate(70deg) !important;
     }
+    .buttonEffect {
+        filter: brightness(1.5) hue-rotate(30deg);
+        animation: light-filter 1s infinite;
+    }
+    #popupOnStart .button .textGlowed{
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+        animation: glowing 1s infinite;
+    }
 }
 /* #popupOnStart .button:active{
     transform: scale(3)
@@ -663,7 +671,7 @@ html, body{
 }
 .buttonEffect {
     filter: brightness(1.5) hue-rotate(30deg);
-    animation: light-filter 1s infinite;
+    /* animation: light-filter 1s infinite; */
 }
 
 @keyframes light-filter {
@@ -682,7 +690,7 @@ html, body{
 }
 #popupOnStart .button .textGlowed{
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
-    animation: glowing 1s infinite;
+    /* animation: glowing 1s infinite; */
 }
 @keyframes glowing {
     0% {
