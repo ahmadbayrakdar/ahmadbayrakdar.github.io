@@ -136,19 +136,11 @@ function mouseMovement(e) {
 document.addEventListener("mousemove", mouseMovement);
 // mouse movement light effect end
 // autoplay audio start
-
 function anyWhereUsersFirstClick() {
   // console.log('clicked');
-  $('.hideThisOnStart').removeClass('hideThisOnStart');
+  // $('.hideThisOnStart').removeClass('hideThisOnStart');
   const audio = document.getElementById("myAudio");
   const playPromise = audio.play();
-  playPromise.then(() => {
-    // The audio file has started playing.
-    // console.log('playing')
-  }, (error) => {
-    // There was an error playing the audio file.
-    // console.log(error)
-  });
 }
 // autoplay audio end
 // popup onstart start

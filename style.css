@@ -484,20 +484,20 @@ html, body{
       url('./images/stars.png'),
       /* url('./images/human.png'), */
       url('./images/effects.png'),
-      url('./images/clouds.png'),
+      /* url('./images/clouds.png'), */
       url('./images/space.jpg');
     background-repeat: repeat-x;
     background-position:
       0 100%,
       /* 50% -20%, */
       0 80%,
-      0 100%,
+      /* 0 100%, */
       0 0;
     background-size:
       2500px,
       1400px,
       cover,
-      cover,
+      /* cover, */
       cover;
     animation: 50s para infinite linear, 10s hueBackground infinite linear;
     }
@@ -565,6 +565,7 @@ html, body{
     align-items: center;
     color: var(--bright);
     flex-direction: column;
+    transition: 0.8s opacity ease-in-out;
 }
 #popupOnStart .portfolioIntro{
     position: fixed;
@@ -594,8 +595,19 @@ html, body{
     -webkit-tap-highlight-color: transparent;
     user-select: none;
 }
-#popupOnStart .button:hover{
-    transform: rotate3d(2, 2, 2, -55deg);
+@media only screen and (min-width: 560px){
+    #popupOnStart .button:hover{
+        transform: rotate3d(2, 2, 2, -55deg);
+    }
+    #popupOnStart .buttonEffect:hover{
+        width: 105%;
+        height: 105%;
+        top: -2.5%;
+        left: -2.5%;
+    }
+    #popupOnStart .buttonEffect:hover:not(.edge){
+        filter: hue-rotate(70deg) !important;
+    }
 }
 /* #popupOnStart .button:active{
     transform: scale(3)
@@ -624,15 +636,6 @@ html, body{
     -webkit-filter: blur(2px);
     filter: blur(2px);
     border-radius: 25px;
-}
-#popupOnStart .buttonEffect:hover{
-    width: 105%;
-    height: 105%;
-    top: -2.5%;
-    left: -2.5%;
-}
-#popupOnStart .buttonEffect:hover:not(.edge){
-    filter: hue-rotate(70deg) !important;
 }
 #popupOnStart .front{
     background-color: #000000ad;
