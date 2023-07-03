@@ -153,6 +153,7 @@ html, body{
     color: var(--bright);
     background-color: #0000008b;
     border-radius: 50px;
+    justify-content: space-around;
 }
 .siteContainer .tabContainer#tabContent01 .yearsExperience:first-of-type > span{
     font-size: 13px;
@@ -499,14 +500,13 @@ html, body{
       cover,
       /* cover, */
       cover;
-    animation: 50s para infinite linear, 10s hueBackground infinite linear;
+    /* animation: 50s para infinite linear, 10s hueBackground infinite linear; */
     }
 
-  @keyframes para {
+    /* @keyframes para {
     100% {
       background-position:
         -5000px 20%,
-        /* 500px -20%, */
         -800px 95%,
         1000px 100%,
         400px 0;
@@ -522,7 +522,7 @@ html, body{
         0%{
             filter: hue-rotate(0deg);
         }
-    }
+    } */
 /* main background end */
 /* typing animation start */
 @keyframes typing {
