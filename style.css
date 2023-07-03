@@ -500,10 +500,10 @@ html, body{
       cover,
       /* cover, */
       cover;
-    /* animation: 50s para infinite linear, 10s hueBackground infinite linear; */
+    animation: 50s para infinite linear, 10s hueBackground infinite linear;
     }
 
-    /* @keyframes para {
+    @keyframes para {
     100% {
       background-position:
         -5000px 20%,
@@ -522,7 +522,7 @@ html, body{
         0%{
             filter: hue-rotate(0deg);
         }
-    } */
+    }
 /* main background end */
 /* typing animation start */
 @keyframes typing {
@@ -726,7 +726,7 @@ html, body{
         position: fixed;
     }
     .mainInfo{
-        top: 160px;
+        top: 150px;
     }
 }
 /* handle fontsize on small screens end */

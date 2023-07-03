@@ -6,7 +6,7 @@ $('.hoverBarContainer .hoverBarBody .tabLink').click(function(){
 
     $(`#tabContent${tabLink}`).addClass('showTab')
     $(`#tabContent${tabLink}`).siblings('.tabContainer').removeClass('showTab')
-
+    console.log('nav active');
 })
 // nav acative style end
 // typing animation start
@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
       } else {
         setTimeout(eraseTitle, 1000);
       }
+      console.log('typing animation');
     }
 
     function eraseTitle() {
@@ -55,6 +56,7 @@ if(currentYear > 2020){
 }else{
     yearsOfExperience = 5;
 }
+console.log('dynamic years of experience');
 experienceElement.textContent = yearsOfExperience + '+ yrs';
 // dynamic years of experience end
 // triggering links by scrolling start
@@ -88,7 +90,7 @@ function triggerButtonClickOnScroll() {
         // $(`#tabContent${tabLink}`).addClass('showTab')
         // $(`#tabContent${tabLink}`).siblings('.tabContainer').removeClass('showTab')
     });
-
+    console.log('triggering links by scrolling');
 }
 var projectsScrollValue = 0;
 var projectsElement = document.getElementById('projectsScroll');
@@ -108,10 +110,12 @@ function changeSection(event){
 $(window).on('wheel', function(event) {
   changeSection(event);
     triggerButtonClickOnScroll();
+    console.log('wheel');
 });
 $(document).keydown(function(event) {
   changeSection(event);
   triggerButtonClickOnScroll();
+  console.log('keydown');
 });
 // triggering links by scrolling end
 // mouse movement light effect start
@@ -129,7 +133,7 @@ function mouseMovement(e) {
     // Add the light to the document body.
     // document.body.appendChild(light);
     document.querySelector('.backgroundMain').appendChild(light);
-
+  console.log('Create a light element');
 }
 
 // Attach the mouse movement event listener.
@@ -141,6 +145,7 @@ function anyWhereUsersFirstClick() {
   // $('.hideThisOnStart').removeClass('hideThisOnStart');
   const audio = document.getElementById("myAudio");
   const playPromise = audio.play();
+  console.log('autoplay audio');
 }
 // autoplay audio end
 // popup onstart start
@@ -150,5 +155,6 @@ $('#popupOnStart .button').click(() => {
   setTimeout(() => {
     $('#popupOnStart').addClass('hidePopup');
   }, 400)
+  console.log('popup onstart');
 })
 // popup onstart end
