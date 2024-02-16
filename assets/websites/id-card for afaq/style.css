@@ -1,0 +1,109 @@
+@font-face {
+  font-family: tajawal;
+  src: url("./fonts/Tajawal-Regular.ttf");
+}
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+.idCardContainer{
+    background-color: #ddd;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+.backIdCardTemplateContainer,
+.frontIdCardTemplateContainer{
+    width: 7cm;
+    height: 10cm;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'tajawal';
+}
+.backIdCardTemplateContainer{
+    background-image: url(./images/IdCardBack.svg);
+}
+.frontIdCardTemplateContainer{
+    background-image: url(./images/IdCardFront.svg);
+}
+.frontIdCardTemplateContainer .personName{
+    margin: 85px 0 0;
+    color: #0E4D76;
+}
+.frontIdCardTemplateContainer .personPosition{
+    margin: 0;
+    color: #89BD41;
+}
+.frontIdCardTemplateContainer .barcodeContainer{
+    width: 75px;
+    height: 75px;
+    margin: 15px 0 0;
+}
+.frontIdCardTemplateContainer .barcodeContainer img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.frontIdCardTemplateContainer .dateContainer{
+    margin: 10px 0 0;
+    font-size: 11px;
+    color: #89BD41;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: row;
+}
+.frontIdCardTemplateContainer .dateContainer .dateItem{
+    padding: 0 5px;
+}
+.frontIdCardTemplateContainer .placeTitleContainer,
+.frontIdCardTemplateContainer .placeAdditionalContainer{
+    color: #0E4D76;
+    font-weight: bold;
+}
+.frontIdCardTemplateContainer .placeTitleContainer{
+    font-size: 15px;
+}
+.frontIdCardTemplateContainer .placeAdditionalContainer{
+    font-size: 13px;
+}
+.frontIdCardTemplateContainer .footerContainer{
+    flex-grow: 1;
+    /* background-color: #fff; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 15px 10px;
+    box-sizing: border-box;
+    align-items: center;
+}
+.frontIdCardTemplateContainer .footerLogoItem{
+    height: 50px;
+    padding: 0 10px;
+}
+.frontIdCardTemplateContainer .footerLogoItem img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.frontIdCardTemplateContainer .footerContactInfo{
+    color: #0E4D76;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.frontIdCardTemplateContainer .footerContactInfo .contactNumber1{
+    font-size: 15px;
+}
+.frontIdCardTemplateContainer .footerContactInfo .contactNumber2{
+    font-size: 13px;
+}
