@@ -157,7 +157,7 @@
             _subject: "New Message from Portfolio"
           };
 
-          fetch('https://formsubmit.co/ajax/ahmad.berkdar.sy@gmail.com', {
+          fetch('./contact.php', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -165,7 +165,10 @@
             },
             body: JSON.stringify(data)
           })
-          .then(response => response.json())
+          .then(response => {
+            if (!response.ok) throw new Error();
+            return response.json();
+          })
           .then(result => {
             showToast("Message sent! I'll get back to you soon.", 'success');
             form.reset();
