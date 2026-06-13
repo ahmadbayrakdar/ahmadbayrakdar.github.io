@@ -25479,7 +25479,7 @@ const Lv = [
                       transition: { delay: 0.1 },
                       className:
                         "text-primary font-mono text-sm tracking-wider mb-4",
-                      children: "FULL-STACK WEB DEVELOPER",
+                      children: "FULL STACK SOFTWARE ENGINEER",
                     }),
                     x.jsxs($e.h1, {
                       initial: { opacity: 0, y: 20 },
@@ -25503,7 +25503,7 @@ const Lv = [
                       className:
                         "text-muted-foreground text-lg md:text-xl max-w-xl mx-auto lg:mx-0 mb-8",
                       children:
-                        "I build high-performance websites and web applications for businesses worldwide. From marketing sites to e-commerce platforms and SaaS products — I bring ideas to life with clean code and modern design.",
+                        "Full Stack Software Engineer with 7+ years of experience building scalable web applications and production-ready systems across SaaS, healthcare, automation, and AI-driven platforms.",
                     }),
                     x.jsxs($e.div, {
                       initial: { opacity: 0, y: 20 },
@@ -25650,7 +25650,7 @@ const Lv = [
               x.jsx("p", {
                 className: "text-muted-foreground text-lg leading-relaxed",
                 children:
-                  "I'm a passionate full-stack developer with 7+ years of experience creating websites and web applications for clients worldwide. I specialize in transforming business requirements into elegant, high-performance digital solutions — from responsive marketing sites and e-commerce platforms to booking systems and learning management systems.",
+                  "Full Stack Software Engineer with 7+ years of experience building scalable web applications and production-ready systems across SaaS, healthcare, automation, and AI-driven platforms. Strong expertise in React, Node.js, TypeScript, and database-driven backend architectures. Skilled in designing full-stack systems from concept to deployment, collaborating with cross-functional teams, and delivering high-impact, production-ready applications in international markets (USA, Germany, UAE, KSA). Comfortable working in fully remote, fast-paced environments with strong ownership and end-to-end development capabilities",
               }),
             ],
           }),
@@ -25754,6 +25754,8 @@ const Lv = [
     { name: "GHL (GoHighLevel)", category: "CMS / Platform" },
     { name: "Salesforce", category: "CMS / Platform" },
     { name: "Hostinger", category: "CMS / Platform" },
+    { name: "Squarespace", category: "CMS / Platform" },
+    { name: "Wix", category: "CMS / Platform" },
     { name: "Docker", category: "DevOps & Tools" },
     { name: "CI/CD", category: "DevOps & Tools" },
     { name: "AWS", category: "DevOps & Tools" },
