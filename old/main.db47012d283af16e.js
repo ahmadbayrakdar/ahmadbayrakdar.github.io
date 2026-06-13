@@ -13578,7 +13578,7 @@
                 [1, "imageContainer"],
                 [
                   "src",
-                  "../../assets/images/ahmad_bayrakdar.jpg",
+                  "../../assets/images/ahmadbayrakdar.jpg",
                   "alt",
                   "author",
                 ],
