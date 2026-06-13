@@ -25542,7 +25542,7 @@ const Lv = [
                         "w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-2 border-primary/30 glow-border",
                       children: x.jsx("img", {
                         src: "/images/ahmadbayrakdar.jpg",
-                        alt: "Ahmad Bayrakdar — Full-Stack Web Developer",
+                        alt: "Ahmad Bayrakdar — Full Stack Software Engineer",
                         className: "w-full h-full object-cover",
                         loading: "eager",
                       }),
