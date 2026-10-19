@@ -1,0 +1,65 @@
+---
+import ProjectCard from './ProjectCard.astro';
+import Icon from './Icon.astro';
+import type { Project } from '../lib/types';
+
+interface Props {
+  projects: Project[];
+  full?: boolean;
+  limit?: number;
+  label?: string;
+}
+const { projects, full = false, limit = 9, label = 'Projects' } = Astro.props;
+
+const counts = new Map<string, number>();
+for (const p of projects) counts.set(p.category, (counts.get(p.category) ?? 0) + 1);
+const cats = [...counts.entries()].sort((a, b) => b[1] - a[1]);
+const kinds = [...new Set(projects.map((p) => p.kind).filter(Boolean))];
+---
+<div class="explorer" data-explorer data-limit={limit} data-full={full ? '1' : '0'}>
+  <div class="explorer-bar no-js-hide">
+    <div class="filter-chips" role="group" aria-label="Filter by category">
+      <button class="filter-chip" type="button" data-cat="" aria-pressed="true">All <small>{projects.length}</small></button>
+      {cats.length > 1 && cats.map(([c, n]) => <button class="filter-chip" type="button" data-cat={c} aria-pressed="false">{c} <small>{n}</small></button>)}
+    </div>
+    <div class="explorer-tools">
+      <div class="search-field">
+        <Icon name="search" />
+        <label class="sr-only" for={`q-${full ? 'full' : 'home'}`}>Search {label.toLowerCase()}</label>
+        <input id={`q-${full ? 'full' : 'home'}`} type="search" data-search placeholder="Search by name or stack" autocomplete="off" />
+      </div>
+      {full && kinds.length > 1 && (
+        <div class="select-field">
+          <label class="sr-only" for="kind-filter">Filter by kind</label>
+          <select id="kind-filter" data-kind>
+            <option value="">All kinds</option>
+            {kinds.map((k) => <option value={k}>{k}</option>)}
+          </select>
+        </div>
+      )}
+      {full && (
+        <div class="select-field">
+          <label class="sr-only" for="sort-order">Sort</label>
+          <select id="sort-order" data-sort>
+            <option value="featured">Featured first</option>
+            <option value="newest">Newest first</option>
+          </select>
+        </div>
+      )}
+    </div>
+  </div>
+  <p class="explorer-status" data-status role="status" aria-live="polite"></p>
+  <ul class="card-grid" data-grid>
+    {projects.map((p, i) => <ProjectCard project={p} order={i} />)}
+  </ul>
+  <p class="empty-state" data-empty hidden>No projects match those filters. <button class="link-quiet" type="button" data-reset>Clear filters</button></p>
+  <div class="more-row">
+    <button class="btn btn-secondary no-js-hide" type="button" data-more hidden>Show all</button>
+    {!full && <a class="link-arrow" href="/projects/">Browse all projects <Icon name="arrowRight" /></a>}
+  </div>
+</div>
+
+<script>
+  import { initExplorers } from '../scripts/filters';
+  initExplorers();
+</script>

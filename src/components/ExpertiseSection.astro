@@ -1,0 +1,41 @@
+---
+import type { Profile, Project } from '../lib/types';
+interface Props {
+  profile: Profile;
+  projects: Project[];
+  num: string;
+}
+const { profile, projects, num } = Astro.props;
+const items = profile.expertise ?? [];
+const bySlug = new Map(projects.map((p) => [p.slug, p]));
+const third = items.length % 3 === 0 || items.length === 5;
+---
+{items.length > 0 && (
+  <section id="expertise" class="section" aria-labelledby="expertise-title">
+    <div class="container">
+      <header class="section-head" data-reveal>
+        <p class="eyebrow"><b>{num}</b> / Expertise</p>
+        <h2 id="expertise-title">What I build, and what I'm good at</h2>
+      </header>
+      <div class="expertise-grid">
+        {items.map((e, i) => {
+          const proof = (e.evidence ?? []).map((s) => bySlug.get(s)).filter(Boolean) as Project[];
+          const span = items.length === 5 ? i >= 2 : items.length % 3 === 0;
+          return (
+            <article class:list={['exp-card', span && third && 'exp-card--third']} data-reveal style={`--i:${i % 3}`}>
+              <h3><span class="mono">{String(i + 1).padStart(2, '0')}</span>{e.title}</h3>
+              <p>{e.description}</p>
+              {e.skills?.length > 0 && <ul class="chips">{e.skills.map((s) => <li class="chip">{s}</li>)}</ul>}
+              {proof.length > 0 && (
+                <p class="proof-line">
+                  <span class="mono">Proof</span>
+                  {proof.map((p) => <a href={`/projects/${p.slug}/`}>{p.title}</a>)}
+                </p>
+              )}
+            </article>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+)}

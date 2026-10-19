@@ -1,0 +1,32 @@
+[Unit]
+Description=Portfolio API backup (SQLite snapshot + media archive)
+After=portfolio-api.service
+
+[Service]
+Type=oneshot
+User=portfolio
+Group=portfolio
+WorkingDirectory=/opt/portfolio-api
+EnvironmentFile=/etc/portfolio-api/env
+ExecStart=/opt/portfolio-api/venv/bin/python /opt/portfolio-api/cli.py backup --dest /var/backups/portfolio-api
+UMask=0077
+
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/portfolio-api /var/backups/portfolio-api
+ProtectHome=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectClock=true
+ProtectHostname=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+RestrictNamespaces=true
+RestrictRealtime=true
+LockPersonality=true
+MemoryMax=256M
+RestrictAddressFamilies=AF_UNIX
+CapabilityBoundingSet=
+SystemCallArchitectures=native

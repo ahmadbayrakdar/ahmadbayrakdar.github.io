@@ -1,0 +1,54 @@
+---
+import type { Profile, Project } from '../lib/types';
+import { period } from '../lib/format';
+interface Props {
+  profile: Profile;
+  projects: Project[];
+  num: string;
+}
+const { profile, projects, num } = Astro.props;
+const items = profile.experience ?? [];
+const edu = profile.education ?? [];
+const bySlug = new Map(projects.map((p) => [p.slug, p]));
+---
+{(items.length > 0 || edu.length > 0) && (
+  <section id="experience" class="section" aria-labelledby="experience-title">
+    <div class="container">
+      <header class="section-head" data-reveal>
+        <p class="eyebrow"><b>{num}</b> / Experience</p>
+        <h2 id="experience-title">Where I've worked</h2>
+      </header>
+      <ol class="timeline">
+        {items.map((e, i) => {
+          const linked = (e.projects ?? []).map((s) => bySlug.get(s)).filter(Boolean) as Project[];
+          return (
+            <li class="tl-item" data-reveal style={`--i:${i % 3}`}>
+              <p class="tl-period">{period(e.start, e.end)}</p>
+              <div class="tl-body">
+                <h3>{e.role} <span>· {e.company}</span></h3>
+                {e.location && <p class="tl-where">{e.location}</p>}
+                {e.bullets?.length > 0 && <ul class="bullets">{e.bullets.map((b) => <li>{b}</li>)}</ul>}
+                {linked.length > 0 && (
+                  <ul class="chips">{linked.map((p) => <li><a class="chip" href={`/projects/${p.slug}/`}>{p.title}</a></li>)}</ul>
+                )}
+              </div>
+            </li>
+          );
+        })}
+      </ol>
+      {edu.length > 0 && (
+        <div class="edu" data-reveal>
+          <p class="mono muted">Education</p>
+          <ul>
+            {edu.map((d) => (
+              <li>
+                <span class="edu-main">{d.degree} <span class="muted">· {d.school}</span></span>
+                <span class="edu-when">{[d.start, d.end].filter(Boolean).join(' – ')}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  </section>
+)}

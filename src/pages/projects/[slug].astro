@@ -1,0 +1,287 @@
+---
+import type { GetStaticPaths } from 'astro';
+import Base from '../../layouts/Base.astro';
+import BrowserFrame from '../../components/BrowserFrame.astro';
+import Icon from '../../components/Icon.astro';
+import { getProfile, getProjects, coverOf, yearsLabel, hasCaseStudy, type Project } from '../../lib/data';
+import { absoluteUrl, hostOf } from '../../lib/format';
+
+export const getStaticPaths = (async () => {
+  const projects = await getProjects();
+  return projects.map((project, i) => ({
+    params: { slug: project.slug },
+    props: { project, prev: projects[i - 1] ?? null, next: projects[i + 1] ?? null },
+  }));
+}) satisfies GetStaticPaths;
+
+interface Props {
+  project: Project;
+  prev: Project | null;
+  next: Project | null;
+}
+const { project: p, prev, next } = Astro.props;
+const profile = await getProfile();
+const site = Astro.site!;
+const cs = p.case_study ?? {};
+const cover = coverOf(p);
+const rest = (p.gallery ?? []).filter((m) => m.id !== cover?.id);
+const timeline = yearsLabel(p);
+
+const meta = [
+  { k: 'Role', v: p.role },
+  { k: 'Timeline', v: timeline },
+  { k: 'Client', v: p.client },
+  { k: 'Type', v: p.kind },
+  { k: 'Category', v: p.category },
+].filter((m) => !!m.v) as { k: string; v: string }[];
+
+const updated = p.updated_at ? new Date(p.updated_at).toLocaleDateString('en-GB', { year: 'numeric', month: 'short' }) : '';
+const facts = [
+  { k: 'Industry', v: p.industry },
+  { k: 'Location', v: p.location },
+  { k: 'Updated', v: updated },
+].filter((m) => !!m.v) as { k: string; v: string }[];
+
+const arch = (cs.architecture ?? '').split('\n').map((l) => l.trimEnd()).filter((l) => l.trim() !== '');
+const responsibilities = cs.responsibilities ?? [];
+const features = cs.features ?? [];
+const challenges = (cs.challenges ?? []).filter((c) => c.challenge || c.solution);
+const results = cs.results ?? [];
+const techGroups = [
+  { title: 'Technology', items: p.tech ?? [] },
+  { title: 'Tags', items: p.tags ?? [] },
+].filter((g) => g.items.length > 0);
+
+const toc = [
+  cs.overview && { id: 'overview', label: 'Overview' },
+  cs.problem && { id: 'problem', label: 'The problem' },
+  (cs.role || responsibilities.length > 0) && { id: 'role', label: 'My role' },
+  features.length > 0 && { id: 'features', label: 'Key features' },
+  arch.length > 0 && { id: 'architecture', label: 'Architecture' },
+  challenges.length > 0 && { id: 'challenges', label: 'Challenges' },
+  results.length > 0 && { id: 'results', label: 'Results' },
+  techGroups.length > 0 && { id: 'tech', label: 'Tech stack' },
+  rest.length > 0 && { id: 'gallery', label: 'Gallery' },
+  cs.notes && { id: 'notes', label: 'Notes' },
+].filter(Boolean) as { id: string; label: string }[];
+
+const base = site.toString().replace(/\/$/, '');
+const description = (p.seo_description || p.summary || p.tagline || `${p.title} — a project by ${profile.name}.`).slice(0, 300);
+const title = p.seo_title || `${p.title} — ${profile.name}`;
+const ogImage = cover ? absoluteUrl(cover.url, site) : null;
+const jsonLd: Record<string, unknown>[] = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: p.title,
+    headline: p.tagline ?? p.title,
+    description,
+    url: `${base}/projects/${p.slug}/`,
+    image: ogImage ?? undefined,
+    datePublished: p.published_at ?? undefined,
+    dateModified: p.updated_at ?? undefined,
+    keywords: [...(p.tech ?? []), ...(p.tags ?? [])].join(', ') || undefined,
+    genre: p.category,
+    author: { '@type': 'Person', name: profile.name, url: `${base}/` },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${base}/` },
+      { '@type': 'ListItem', position: 2, name: 'Projects', item: `${base}/projects/` },
+      { '@type': 'ListItem', position: 3, name: p.title, item: `${base}/projects/${p.slug}/` },
+    ],
+  },
+];
+---
+<Base title={title} description={description} image={ogImage} imageAlt={cover?.alt || `${p.title} screenshot`} type="article" jsonLd={jsonLd}>
+  <article class="container">
+    <header class="cs-head">
+      <nav class="cs-crumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/projects/">Projects</a></li>
+          <li><span aria-current="page">{p.title}</span></li>
+        </ol>
+      </nav>
+      <h1 data-reveal>{p.title}</h1>
+      {p.tagline && <p class="lead" data-reveal style="--i:1">{p.tagline}</p>}
+      {meta.length > 0 && (
+        <dl class="cs-meta" data-reveal style="--i:2">
+          {meta.map((m) => <div><dt>{m.k}</dt><dd>{m.v}</dd></div>)}
+        </dl>
+      )}
+      <div class="cs-actions" data-reveal style="--i:3">
+        {p.live_url && <a class="btn btn-primary" href={p.live_url} target="_blank" rel="noopener noreferrer">Live site <Icon name="arrowUpRight" /></a>}
+        {p.repo_url && <a class="btn btn-secondary" href={p.repo_url} target="_blank" rel="noopener noreferrer"><Icon name="github" /> Repository</a>}
+        {(p.links ?? []).map((l) => <a class="btn btn-secondary" href={l.url} target="_blank" rel="noopener noreferrer">{l.label} <Icon name="arrowUpRight" /></a>)}
+      </div>
+    </header>
+
+    {cover && (
+      <div class="cs-cover zoom-host" data-reveal>
+        <button type="button" class="frame-button" data-lightbox-item data-full={cover.url} data-alt={cover.alt || `${p.title} screenshot`} aria-label={`Open ${p.title} screenshot full size`}>
+          <BrowserFrame
+            media={cover}
+            title={p.title}
+            label={hostOf(p.live_url) ?? p.title}
+            variant={p.category === 'Desktop & Mobile' ? 'window' : 'browser'}
+            eager
+            sizes="(min-width: 1200px) 1152px, 100vw"
+          />
+        </button>
+      </div>
+    )}
+
+    <div class="cs-layout">
+      <div class="cs-main">
+        {cs.overview && (
+          <section class="cs-section" id="overview" data-reveal>
+            <h2><span class="mono">Overview</span>What this project is</h2>
+            <p class="cs-prose cs-prose--strong">{cs.overview}</p>
+          </section>
+        )}
+        {cs.problem && (
+          <section class="cs-section" id="problem" data-reveal>
+            <h2><span class="mono">Context</span>The problem</h2>
+            <p class="cs-prose">{cs.problem}</p>
+          </section>
+        )}
+        {(cs.role || responsibilities.length > 0) && (
+          <section class="cs-section" id="role" data-reveal>
+            <h2><span class="mono">Contribution</span>My role &amp; responsibilities</h2>
+            {cs.role && <p class="cs-prose">{cs.role}</p>}
+            {responsibilities.length > 0 && <ul class="cs-list">{responsibilities.map((r) => <li>{r}</li>)}</ul>}
+          </section>
+        )}
+        {features.length > 0 && (
+          <section class="cs-section" id="features" data-reveal>
+            <h2><span class="mono">Scope</span>Key features</h2>
+            <ul class="cs-list cs-features">{features.map((f) => <li>{f}</li>)}</ul>
+          </section>
+        )}
+        {arch.length > 0 && (
+          <section class="cs-section" id="architecture" data-reveal>
+            <h2><span class="mono">System</span>Architecture</h2>
+            <pre class="cs-arch"><code>{arch.map((line, i) => (
+              <>{i > 0 && '\n'}{line.split('→').map((part, j) => <>{j > 0 && <span class="arrow">→</span>}{part}</>)}</>
+            ))}</code></pre>
+          </section>
+        )}
+        {challenges.length > 0 && (
+          <section class="cs-section" id="challenges" data-reveal>
+            <h2><span class="mono">Engineering</span>Challenges &amp; solutions</h2>
+            <div class="cs-challenges">
+              {challenges.map((c) => (
+                <div class="cs-pair">
+                  <div><span class="mono">Challenge</span><p>{c.challenge}</p></div>
+                  <div><span class="mono">Solution</span><p>{c.solution}</p></div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+        {results.length > 0 && (
+          <section class="cs-section" id="results" data-reveal>
+            <h2><span class="mono">Outcome</span>Results</h2>
+            <ul class="cs-list cs-results">{results.map((r) => <li>{r}</li>)}</ul>
+          </section>
+        )}
+        {techGroups.length > 0 && (
+          <section class="cs-section" id="tech" data-reveal>
+            <h2><span class="mono">Stack</span>Tech stack</h2>
+            <div class="cs-tech">
+              {techGroups.map((g) => (
+                <div>
+                  <h3>{g.title}</h3>
+                  <ul class="chips">{g.items.map((t) => <li class="chip">{t}</li>)}</ul>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+        {rest.length > 0 && (
+          <section class="cs-section" id="gallery" data-reveal>
+            <h2><span class="mono">Gallery</span>More screens</h2>
+            <ul class="cs-gallery">
+              {rest.map((m) => (
+                <li>
+                  <button type="button" data-lightbox-item data-full={m.url} data-alt={m.alt || `${p.title} screenshot`} aria-label={`Open image: ${m.alt || p.title}`}>
+                    <img src={m.thumb_url || m.url} width={m.width} height={m.height} alt={m.alt || `${p.title} screenshot`} loading="lazy" decoding="async" />
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+        {cs.notes && (
+          <section class="cs-section" id="notes" data-reveal>
+            <h2><span class="mono">Notes</span>Additional notes</h2>
+            <p class="cs-prose">{cs.notes}</p>
+          </section>
+        )}
+        {!hasCaseStudy(p) && !techGroups.length && (
+          <p class="muted">A full write-up for this project is not published yet.</p>
+        )}
+      </div>
+
+      {(facts.length > 0 || toc.length > 0) && (
+        <aside class="cs-aside" aria-label="Project summary">
+          {facts.length > 0 && (
+            <section>
+              <h2>Quick facts</h2>
+              <dl class="cs-facts">{facts.map((f) => <div><dt>{f.k}</dt><dd>{f.v}</dd></div>)}</dl>
+            </section>
+          )}
+          {toc.length > 1 && (
+            <section class="cs-toc-wrap">
+              <h2>On this page</h2>
+              <nav class="cs-toc" aria-label="Table of contents">
+                {toc.map((t) => <a href={`#${t.id}`}>{t.label}</a>)}
+              </nav>
+            </section>
+          )}
+        </aside>
+      )}
+    </div>
+
+    <nav class="cs-pager" aria-label="More projects">
+      {prev && (
+        <a href={`/projects/${prev.slug}/`} rel="prev">
+          <span class="mono">← Previous</span>
+          <strong>{prev.title}</strong>
+        </a>
+      )}
+      {next && (
+        <a href={`/projects/${next.slug}/`} rel="next">
+          <span class="mono">Next →</span>
+          <strong>{next.title}</strong>
+        </a>
+      )}
+    </nav>
+
+    <section class="cs-cta" aria-labelledby="cta-title">
+      <h2 id="cta-title">Interested in working together?</h2>
+      <a class="btn btn-primary" href="/#contact">Get in touch <Icon name="arrowRight" /></a>
+    </section>
+  </article>
+
+  <dialog id="lightbox" class="lightbox" aria-label="Image viewer">
+    <div class="lb-bar">
+      <span data-lb-counter></span>
+      <button class="lb-btn" type="button" data-lb-close aria-label="Close image viewer"><Icon name="x" /></button>
+    </div>
+    <div class="lb-stage">
+      <button class="lb-btn lb-prev" type="button" data-lb-prev aria-label="Previous image"><Icon name="chevronLeft" /></button>
+      <img data-lb-img alt="" />
+      <button class="lb-btn lb-next" type="button" data-lb-next aria-label="Next image"><Icon name="chevronRight" /></button>
+    </div>
+    <p class="lb-caption" data-lb-caption></p>
+  </dialog>
+
+  <script>
+    import { initLightbox } from '../../scripts/lightbox';
+    initLightbox();
+  </script>
+</Base>

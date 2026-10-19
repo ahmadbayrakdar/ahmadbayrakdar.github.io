@@ -1,0 +1,47 @@
+---
+import { coverOf, yearsLabel, type Project } from '../lib/data';
+
+interface Props {
+  project: Project;
+  order: number;
+}
+const { project: p, order } = Astro.props;
+const cover = coverOf(p);
+const year = p.year_end ?? p.year_start;
+const chips = (p.tech ?? []).slice(0, 3);
+const search = [p.title, p.summary, p.tagline, p.category, p.kind, p.client, ...(p.tech ?? []), ...(p.tags ?? [])]
+  .filter(Boolean)
+  .join(' ')
+  .toLowerCase();
+---
+<li
+  class="p-card"
+  data-card
+  data-category={p.category}
+  data-kind={p.kind}
+  data-featured={p.featured ? '1' : '0'}
+  data-year={String(year ?? '')}
+  data-order={order}
+  data-search={search}
+>
+  <div class="p-card-thumb">
+    {cover && (
+      <img
+        src={cover.thumb_url || cover.url}
+        width={cover.width}
+        height={cover.height}
+        alt=""
+        loading="lazy"
+        decoding="async"
+      />
+    )}
+  </div>
+  <div class="p-card-body">
+    <div class="p-card-top">
+      <h3><a href={`/projects/${p.slug}/`}>{p.title}</a></h3>
+      {year && <span class="p-card-year" title={yearsLabel(p)}>{String(year)}</span>}
+    </div>
+    <p class="p-card-summary">{p.summary ?? p.tagline ?? ''}</p>
+    {chips.length > 0 && <ul class="chips">{chips.map((t) => <li class="chip">{t}</li>)}</ul>}
+  </div>
+</li>

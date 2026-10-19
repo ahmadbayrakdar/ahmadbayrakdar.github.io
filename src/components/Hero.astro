@@ -1,0 +1,84 @@
+---
+import Icon from './Icon.astro';
+import type { Profile, Project } from '../lib/types';
+import { yearsSince } from '../lib/format';
+
+interface Props {
+  profile: Profile;
+  projects: Project[];
+}
+const { profile, projects } = Astro.props;
+
+// Facts are derived from data, never typed in.
+const years: number[] = [];
+for (const e of profile.experience ?? []) {
+  const y = Number(String(e.start ?? '').slice(0, 4));
+  if (y > 1990) years.push(y);
+}
+for (const p of projects) {
+  const y = Number(p.year_start);
+  if (y > 1990) years.push(y);
+}
+const yrs = years.length ? yearsSince(Math.min(...years)) : 0;
+
+// The first expertise area lists the primary stack in priority order; fall back to the most used tech.
+const freq = new Map<string, number>();
+for (const p of projects) for (const t of p.tech ?? []) freq.set(t, (freq.get(t) ?? 0) + 1);
+const topStack = [...freq.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3).map(([t]) => t);
+const primary = (profile.expertise?.[0]?.skills ?? []).slice(0, 3);
+const stack = primary.length ? primary : topStack;
+
+const proof = [
+  yrs > 0 && { k: 'Experience', v: `${yrs}+ years` },
+  projects.length > 0 && { k: 'Shipped', v: `${projects.length} projects` },
+  profile.location && { k: 'Location', v: profile.location },
+  stack.length > 0 && { k: 'Core stack', v: stack.join(' · ') },
+].filter(Boolean) as { k: string; v: string }[];
+
+const current = (profile.experience ?? []).find((e) => !e.end) ?? profile.experience?.[0];
+---
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      {profile.availability && (
+        <p class="pill" data-reveal><span class="dot-ok" aria-hidden="true"></span>{profile.availability}</p>
+      )}
+      <h1 id="hero-title" class="display" data-reveal style="--i:1">{profile.headline}</h1>
+      <p class="lead" data-reveal style="--i:2">{profile.intro}</p>
+      <div class="cta-row" data-reveal style="--i:3">
+        <a class="btn btn-primary" href="#work">View selected work <Icon name="arrowRight" /></a>
+        {profile.resume_url && (
+          <a class="btn btn-secondary" href={profile.resume_url} download>
+            <Icon name="download" /> Download résumé
+          </a>
+        )}
+        <a class="link-arrow" href="#contact">Contact</a>
+      </div>
+      {proof.length > 0 && (
+        <dl class="proof" data-reveal style="--i:4">
+          {proof.map((f) => <div><dt>{f.k}</dt><dd>{f.v}</dd></div>)}
+        </dl>
+      )}
+    </div>
+    <div class="hero-portrait" data-reveal style="--i:2">
+      <div class="photo">
+        <img
+          src="/images/ahmadbayrakdar-900.jpg"
+          srcset="/images/ahmadbayrakdar-900.jpg 898w, /images/ahmadbayrakdar.jpg 1916w"
+          sizes="(min-width: 960px) 420px, 100vw"
+          width="898"
+          height="1200"
+          alt={`Portrait of ${profile.name}`}
+          fetchpriority="high"
+          decoding="async"
+        />
+      </div>
+      {current && (
+        <p class="now-card">
+          <span class="mono">Currently</span>
+          <span><strong>{current.role}</strong> @ {current.company}</span>
+        </p>
+      )}
+    </div>
+  </div>
+</section>

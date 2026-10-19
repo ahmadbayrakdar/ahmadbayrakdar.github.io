@@ -1,0 +1,36 @@
+---
+import type { Media } from '../lib/types';
+interface Props {
+  media: Media | null;
+  title: string;
+  label?: string | null;
+  variant?: 'browser' | 'window';
+  eager?: boolean;
+  sizes?: string;
+}
+const { media, title, label, variant = 'browser', eager = false, sizes = '(min-width: 1200px) 640px, 100vw' } = Astro.props;
+const srcset = media && media.thumb_url && media.thumb_url !== media.url ? `${media.thumb_url} 800w, ${media.url} ${Math.max(media.width, 801)}w` : undefined;
+---
+<div class:list={['frame', variant === 'window' && 'frame--window']}>
+  <div class="frame-bar" aria-hidden="true">
+    <span class="frame-dots"><i></i><i></i><i></i></span>
+    <span class="frame-url">{label ?? title}</span>
+  </div>
+  <div class="frame-body">
+    {media ? (
+      <img
+        src={media.thumb_url || media.url}
+        srcset={srcset}
+        sizes={srcset ? sizes : undefined}
+        width={media.width}
+        height={media.height}
+        alt={media.alt || `${title} screenshot`}
+        loading={eager ? 'eager' : 'lazy'}
+        fetchpriority={eager ? 'high' : undefined}
+        decoding="async"
+      />
+    ) : (
+      <span class="placeholder">No preview</span>
+    )}
+  </div>
+</div>

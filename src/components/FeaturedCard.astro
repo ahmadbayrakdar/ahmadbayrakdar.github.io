@@ -1,0 +1,53 @@
+---
+import BrowserFrame from './BrowserFrame.astro';
+import Icon from './Icon.astro';
+import { coverOf, hasCaseStudy, yearsLabel, type Project } from '../lib/data';
+import { hostOf } from '../lib/format';
+
+interface Props {
+  project: Project;
+  index: number;
+}
+const { project: p, index } = Astro.props;
+const href = `/projects/${p.slug}/`;
+const cs = hasCaseStudy(p);
+const num = String(index + 1).padStart(2, '0');
+const meta = [p.role, yearsLabel(p), p.kind].filter(Boolean) as string[];
+const tech = p.tech ?? [];
+const shown = tech.slice(0, 6);
+const rest = tech.length - shown.length;
+const sizes = index === 0 ? '(min-width: 1200px) 700px, (min-width: 860px) 58vw, 100vw' : '(min-width: 1200px) 600px, (min-width: 860px) 54vw, 100vw';
+---
+<article class="work-card zoom-host" data-reveal>
+  <a class="work-media" href={href} tabindex="-1" aria-hidden="true">
+    <BrowserFrame
+      media={coverOf(p)}
+      title={p.title}
+      label={hostOf(p.live_url) ?? p.title}
+      variant={p.category === 'Desktop & Mobile' ? 'window' : 'browser'}
+      eager={index === 0}
+      sizes={sizes}
+    />
+  </a>
+  <div class="work-body">
+    <span class="work-index">{num}</span>
+    <h3><a href={href}>{p.title}</a></h3>
+    {p.tagline && <p class="work-tagline">{p.tagline}</p>}
+    {meta.length > 0 && <p class="meta-row">{meta.map((m) => <span>{m}</span>)}</p>}
+    {p.highlights?.length > 0 && (
+      <ul class="ticks">{p.highlights.slice(0, 3).map((h) => <li>{h}</li>)}</ul>
+    )}
+    {shown.length > 0 && (
+      <ul class="chips" aria-label="Technologies">
+        {shown.map((t) => <li class="chip">{t}</li>)}
+        {rest > 0 && <li class="chip chip-more">+{rest}</li>}
+      </ul>
+    )}
+    <div class="card-actions">
+      <a class="link-arrow" href={href}>{cs ? 'Read case study' : 'View project'} <Icon name="arrowRight" /></a>
+      {p.live_url && (
+        <a class="link-arrow" href={p.live_url} target="_blank" rel="noopener noreferrer">Live site <Icon name="arrowUpRight" /></a>
+      )}
+    </div>
+  </div>
+</article>

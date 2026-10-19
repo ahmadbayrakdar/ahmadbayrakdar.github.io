@@ -1,0 +1,85 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import FeaturedCard from '../components/FeaturedCard.astro';
+import ExpertiseSection from '../components/ExpertiseSection.astro';
+import ExperienceSection from '../components/ExperienceSection.astro';
+import ProjectsExplorer from '../components/ProjectsExplorer.astro';
+import AboutSection from '../components/AboutSection.astro';
+import ContactSection from '../components/ContactSection.astro';
+import { getProfile, getProjects } from '../lib/data';
+
+const profile = await getProfile();
+const projects = await getProjects();
+const featured = projects.filter((p) => !!p.featured);
+const others = projects.filter((p) => !p.featured);
+
+// Section numbering follows whichever sections actually render.
+let n = 0;
+const next = () => String(++n).padStart(2, '0');
+const nWork = featured.length ? next() : '';
+const nExpertise = profile.expertise?.length ? next() : '';
+const nExperience = profile.experience?.length || profile.education?.length ? next() : '';
+const nProjects = others.length ? next() : '';
+const nAbout = profile.about?.length ? next() : '';
+const nContact = next();
+
+const site = Astro.site!.toString().replace(/\/$/, '');
+const description = `${profile.positioning}. ${profile.intro}`.slice(0, 300);
+const sameAs = [profile.github, profile.linkedin, profile.youtube].filter(Boolean);
+const jsonLd: Record<string, unknown>[] = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: profile.name,
+    jobTitle: profile.positioning,
+    description: profile.intro,
+    url: `${site}/`,
+    image: `${site}/images/ahmadbayrakdar.jpg`,
+    email: profile.email ? `mailto:${profile.email}` : undefined,
+    address: profile.location ? { '@type': 'PostalAddress', addressCountry: profile.location } : undefined,
+    sameAs,
+  },
+];
+---
+<Base
+  title={`${profile.name} — ${profile.positioning}`}
+  description={description}
+  image="/images/ahmadbayrakdar.jpg"
+  imageAlt={`Portrait of ${profile.name}`}
+  jsonLd={jsonLd}
+>
+  <Hero profile={profile} projects={projects} />
+
+  {featured.length > 0 && (
+    <section id="work" class="section" aria-labelledby="work-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow"><b>{nWork}</b> / Selected work</p>
+          <h2 id="work-title">Products and sites I've shipped end to end</h2>
+        </header>
+        <div class="work-list">
+          {featured.map((p, i) => <FeaturedCard project={p} index={i} />)}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <ExpertiseSection profile={profile} projects={projects} num={nExpertise} />
+  <ExperienceSection profile={profile} projects={projects} num={nExperience} />
+
+  {others.length > 0 && (
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow"><b>{nProjects}</b> / More projects</p>
+          <h2 id="projects-title">Everything else I've built</h2>
+        </header>
+        <ProjectsExplorer projects={others} limit={9} label="more projects" />
+      </div>
+    </section>
+  )}
+
+  <AboutSection profile={profile} num={nAbout} />
+  <ContactSection profile={profile} num={nContact} />
+</Base>

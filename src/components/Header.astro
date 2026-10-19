@@ -1,0 +1,47 @@
+---
+import Icon from './Icon.astro';
+import { initials } from '../lib/format';
+interface Props {
+  name: string;
+}
+const { name } = Astro.props;
+const links = [
+  { href: '/#work', label: 'Work' },
+  { href: '/#expertise', label: 'Expertise' },
+  { href: '/#experience', label: 'Experience' },
+  { href: '/#about', label: 'About' },
+  { href: '/#contact', label: 'Contact' },
+];
+---
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href="/" aria-label={`${name} - home`}>
+      <span class="wordmark-badge" aria-hidden="true">{initials(name)}</span>
+      <span>{name}</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      {links.map((l) => <a href={l.href}>{l.label}</a>)}
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Toggle colour theme">
+        <Icon name="sun" class="i-sun" />
+        <Icon name="moon" class="i-moon" />
+      </button>
+      <a class="btn btn-primary btn-sm" href="/#contact">Hire me</a>
+      <button class="icon-btn menu-btn" type="button" data-menu-open aria-label="Open menu" aria-expanded="false" aria-controls="mobile-sheet">
+        <Icon name="menu" />
+      </button>
+    </div>
+  </div>
+</header>
+<div class="mobile-sheet" id="mobile-sheet" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="mobile-sheet-top">
+      <span class="wordmark"><span class="wordmark-badge" aria-hidden="true">{initials(name)}</span><span>{name}</span></span>
+      <button class="icon-btn" type="button" data-menu-close aria-label="Close menu"><Icon name="x" /></button>
+    </div>
+    <nav aria-label="Mobile">
+      {links.map((l) => <a href={l.href}>{l.label}</a>)}
+    </nav>
+    <a class="btn btn-primary" href="/#contact">Hire me</a>
+  </div>
+

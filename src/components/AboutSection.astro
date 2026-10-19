@@ -1,0 +1,41 @@
+---
+import type { Profile } from '../lib/types';
+interface Props {
+  profile: Profile;
+  num: string;
+}
+const { profile, num } = Astro.props;
+// Optional extension fields: rendered only when the API provides them.
+const extra = profile as Profile & { how_i_work?: string[]; languages?: string[] };
+const how = extra.how_i_work ?? [];
+const langs = extra.languages ?? [];
+const facts = [
+  profile.location && { k: 'Based in', v: profile.location },
+  profile.availability && { k: 'Availability', v: profile.availability },
+  profile.positioning && { k: 'Focus', v: profile.positioning },
+  langs.length > 0 && { k: 'Languages', v: langs.join(', ') },
+].filter(Boolean) as { k: string; v: string }[];
+---
+{(profile.about?.length > 0 || facts.length > 0) && (
+  <section id="about" class="section" aria-labelledby="about-title">
+    <div class="container">
+      <header class="section-head" data-reveal>
+        <p class="eyebrow"><b>{num}</b> / About</p>
+        <h2 id="about-title">A little more about me</h2>
+      </header>
+      <div class="about-grid">
+        <div class="about-copy" data-reveal>
+          {profile.about.map((para) => <p>{para}</p>)}
+        </div>
+        <div data-reveal style="--i:1">
+          <dl class="facts">
+            {facts.map((f) => <div><dt>{f.k}</dt><dd>{f.v}</dd></div>)}
+            {how.length > 0 && (
+              <div><dt>How I work</dt><dd><ol>{how.map((h) => <li>{h}</li>)}</ol></dd></div>
+            )}
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+)}

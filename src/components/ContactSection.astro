@@ -1,0 +1,91 @@
+---
+import Icon from './Icon.astro';
+import type { IconName } from '../lib/icons';
+import type { Profile } from '../lib/types';
+import { waLink } from '../lib/format';
+
+interface Props {
+  profile: Profile;
+  num: string;
+}
+const { profile, num } = Astro.props;
+const api = (import.meta.env.PUBLIC_API_URL ?? 'https://portfolio-api.builderization.com').replace(/\/$/, '');
+
+type Row = { label: string; value: string; href?: string; icon: IconName; copy?: boolean; external?: boolean };
+const rows: Row[] = [
+  profile.email && { label: 'Email', value: profile.email, href: `mailto:${profile.email}`, icon: 'mail' as IconName, copy: true },
+  profile.whatsapp && { label: 'WhatsApp', value: profile.whatsapp, href: waLink(profile.whatsapp), icon: 'whatsapp' as IconName, external: true },
+  profile.linkedin && { label: 'LinkedIn', value: profile.linkedin.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, ''), href: profile.linkedin, icon: 'linkedin' as IconName, external: true },
+  profile.github && { label: 'GitHub', value: profile.github.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, ''), href: profile.github, icon: 'github' as IconName, external: true },
+  profile.youtube && { label: 'YouTube', value: profile.youtube.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, ''), href: profile.youtube, icon: 'youtube' as IconName, external: true },
+  profile.resume_url && { label: 'Résumé', value: 'Download PDF', href: profile.resume_url, icon: 'file' as IconName },
+].filter(Boolean) as Row[];
+---
+<section id="contact" class="section" aria-labelledby="contact-title">
+  <div class="container contact-grid">
+    <div class="contact-copy" data-reveal>
+      <p class="eyebrow"><b>{num}</b> / Contact</p>
+      <h2 id="contact-title">Let's build something reliable.</h2>
+      <p class="lead">Tell me what you're building and where it's stuck. I read every message and reply personally.</p>
+      <ul class="contact-list">
+        {rows.map((r) => (
+          <li>
+            {r.copy ? (
+              <div class="contact-row">
+                <Icon name={r.icon} />
+                <span class="label">{r.label}</span>
+                <a class="val" href={r.href}>{r.value}</a>
+                <button class="copy-btn" type="button" data-copy={r.value} aria-label={`Copy ${r.label.toLowerCase()} address`}>
+                  <Icon name="copy" /><span>Copy</span>
+                </button>
+              </div>
+            ) : (
+              <a class="contact-row" href={r.href} target={r.external ? '_blank' : undefined} rel={r.external ? 'noopener noreferrer' : undefined}>
+                <Icon name={r.icon} />
+                <span class="label">{r.label}</span>
+                <span class="val">{r.value}</span>
+                <Icon name={r.external ? 'arrowUpRight' : 'download'} />
+              </a>
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <form class="form-card" id="contact-form" data-reveal style="--i:1" data-api={api} novalidate>
+      <h3>Send a message</h3>
+      <div class="field-row">
+        <div class="field">
+          <label for="cf-name">Name</label>
+          <input class="input" id="cf-name" name="name" type="text" autocomplete="name" required maxlength="120" aria-describedby="cf-name-err" />
+          <p class="field-error" id="cf-name-err"></p>
+        </div>
+        <div class="field">
+          <label for="cf-email">Email</label>
+          <input class="input" id="cf-email" name="email" type="email" autocomplete="email" required maxlength="200" aria-describedby="cf-email-err" />
+          <p class="field-error" id="cf-email-err"></p>
+        </div>
+      </div>
+      <div class="field">
+        <label for="cf-company">Company <span class="opt">(optional)</span></label>
+        <input class="input" id="cf-company" name="company" type="text" autocomplete="organization" maxlength="160" />
+      </div>
+      <div class="field">
+        <label for="cf-message">Message</label>
+        <textarea id="cf-message" name="message" required minlength="10" maxlength="5000" aria-describedby="cf-message-err"></textarea>
+        <p class="field-error" id="cf-message-err"></p>
+      </div>
+      <div class="hp" aria-hidden="true">
+        <label for="cf-website">Website</label>
+        <input id="cf-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+      </div>
+      <div class="form-status" id="cf-status" role="status" aria-live="polite"></div>
+      <button class="btn btn-primary" type="submit" id="cf-submit"><span>Send message</span> <Icon name="send" /></button>
+    </form>
+  </div>
+</section>
+
+<script>
+  import { initContact } from '../scripts/contact';
+  initContact();
+</script>

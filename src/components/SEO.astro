@@ -1,0 +1,33 @@
+---
+import { absoluteUrl } from '../lib/format';
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string | null;
+  imageAlt?: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+  jsonLd?: Record<string, unknown>[];
+}
+const { title, description, image, imageAlt, type = 'website', noindex = false, jsonLd = [] } = Astro.props;
+const site = Astro.site ?? new URL('https://ahmadbayrakdar.github.io');
+const canonical = new URL(Astro.url.pathname, site).toString();
+const img = absoluteUrl(image ?? '/images/ahmadbayrakdar.jpg', site);
+---
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+{noindex && <meta name="robots" content="noindex, nofollow" />}
+<meta property="og:site_name" content="Ahmad Bayrakdar" />
+<meta property="og:type" content={type} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={img} />
+{imageAlt && <meta property="og:image:alt" content={imageAlt} />}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={img} />
+{jsonLd.map((d) => <script type="application/ld+json" set:html={JSON.stringify(d).replace(/</g, '\\u003c')} />)}

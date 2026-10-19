@@ -1,0 +1,38 @@
+---
+import Base from '../../layouts/Base.astro';
+import ProjectsExplorer from '../../components/ProjectsExplorer.astro';
+import { getProfile, getProjects } from '../../lib/data';
+
+const profile = await getProfile();
+const projects = await getProjects();
+const site = Astro.site!.toString().replace(/\/$/, '');
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${site}/` },
+      { '@type': 'ListItem', position: 2, name: 'Projects', item: `${site}/projects/` },
+    ],
+  },
+];
+---
+<Base
+  title={`Projects — ${profile.name}`}
+  description={`All ${projects.length} projects by ${profile.name}: products, client sites and applications, filterable by category and type.`}
+  jsonLd={jsonLd}
+>
+  <div class="container">
+    <header class="page-head">
+      <nav class="cs-crumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><span aria-current="page">Projects</span></li>
+        </ol>
+      </nav>
+      <h1 class="display">All projects</h1>
+      <p class="lead">{projects.length} projects across products, client work and employment. Filter by category or search by stack.</p>
+    </header>
+    <ProjectsExplorer projects={projects} full label="projects" />
+  </div>
+</Base>

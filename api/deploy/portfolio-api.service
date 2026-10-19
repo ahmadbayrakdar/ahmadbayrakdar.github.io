@@ -1,0 +1,47 @@
+[Unit]
+Description=Portfolio API (FastAPI / uvicorn)
+After=network.target
+
+[Service]
+Type=simple
+User=portfolio
+Group=portfolio
+WorkingDirectory=/opt/portfolio-api
+EnvironmentFile=/etc/portfolio-api/env
+ExecStart=/opt/portfolio-api/venv/bin/uvicorn app.main:create_app_from_env --factory \
+    --host 127.0.0.1 --port 8810 --workers 1 \
+    --proxy-headers --forwarded-allow-ips 127.0.0.1 --no-server-header
+Restart=on-failure
+RestartSec=3
+
+# Files the service creates are private (db, wal); uploaded media is chmod 644 by the app so nginx can serve it.
+UMask=0077
+# Image processing peaks around 300 MB for a 30 MP RGBA upload, plus one 64 MiB scrypt hash at a time.
+MemoryMax=512M
+TasksMax=128
+
+# Hardening
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/portfolio-api
+ProtectHome=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectClock=true
+ProtectHostname=true
+ProtectProc=invisible
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+RestrictNamespaces=true
+RestrictRealtime=true
+LockPersonality=true
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+CapabilityBoundingSet=
+SystemCallArchitectures=native
+SystemCallFilter=@system-service
+SystemCallErrorNumber=EPERM
+
+[Install]
+WantedBy=multi-user.target

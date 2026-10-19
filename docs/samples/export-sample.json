@@ -1,0 +1,1769 @@
+{
+ "profile": {
+  "name": "Ahmad Bayrakdar",
+  "headline": "SAMPLE headline",
+  "positioning": "Senior Full-Stack Engineer",
+  "intro": "SAMPLE intro.",
+  "location": "Egypt (remote)",
+  "availability": "Open to remote roles",
+  "email": "ahmad.bayrakdar.eg@gmail.com",
+  "whatsapp": "+201080857997",
+  "linkedin": null,
+  "github": "https://github.com/ahmadbayrakdar",
+  "youtube": "https://www.youtube.com/@ahmadbayrakdar",
+  "resume_url": "/Ahmad-Bayrakdar-CV.pdf",
+  "about": [
+   "SAMPLE about 1",
+   "SAMPLE about 2"
+  ],
+  "expertise": [
+   {
+    "title": "Full-stack product engineering",
+    "description": "SAMPLE",
+    "skills": [
+     "React",
+     "Node.js"
+    ],
+    "evidence": [
+     "dbkbeauty"
+    ]
+   }
+  ],
+  "experience": [
+   {
+    "role": "Full Stack Software Engineer",
+    "company": "Shrubhub",
+    "location": "Remote (USA)",
+    "start": "2023-10",
+    "end": null,
+    "bullets": [
+     "SAMPLE"
+    ],
+    "projects": []
+   }
+  ],
+  "education": [
+   {
+    "degree": "BSc Computer Engineering",
+    "school": "International University for Science and Technology, Damascus",
+    "start": "2015",
+    "end": "2021"
+   }
+  ]
+ },
+ "projects": [
+  {
+   "id": 1,
+   "slug": "dbkbeauty",
+   "title": "DBKBeauty",
+   "tagline": "An MLM-style Korean skincare sales and recruitment website, South Korea and USA",
+   "summary": "An MLM-style Korean skincare sales and recruitment website, South Korea and USA",
+   "category": "Client Websites",
+   "kind": "Client",
+   "client": null,
+   "industry": null,
+   "location": null,
+   "role": "Full-stack developer",
+   "year_start": "2026",
+   "year_end": "2026",
+   "status": "published",
+   "featured": true,
+   "priority": 10,
+   "tech": [
+    "HTML",
+    "CSS",
+    "Javascript",
+    "GHL",
+    "SEO"
+   ],
+   "tags": [],
+   "highlights": [
+    "Responsive build",
+    "SEO setup"
+   ],
+   "links": [],
+   "live_url": "https://dbkbeauty.com/",
+   "repo_url": null,
+   "case_study": {
+    "overview": "Sample overview.",
+    "problem": "Sample problem.",
+    "role": "Sample role.",
+    "responsibilities": [
+     "a",
+     "b"
+    ],
+    "features": [
+     "x",
+     "y",
+     "z"
+    ],
+    "architecture": "Browser → nginx → PHP → MySQL",
+    "challenges": [
+     {
+      "challenge": "c",
+      "solution": "s"
+     }
+    ],
+    "results": [
+     "r"
+    ]
+   },
+   "seo_title": null,
+   "seo_description": null,
+   "cover": {
+    "id": 1,
+    "url": "https://lnkalazscpbefxiqgsct.supabase.co/storage/v1/object/public/project-images/dbkbeauty-1773884278740.png",
+    "thumb_url": "https://lnkalazscpbefxiqgsct.supabase.co/storage/v1/object/public/project-images/dbkbeauty-1773884278740.png",
+    "width": 1440,
+    "height": 900,
+    "alt": "DBKBeauty screenshot",
+    "sort": 0
+   },
+   "gallery": [
+    {
+     "id": 1,
+     "url": "https://lnkalazscpbefxiqgsct.supabase.co/storage/v1/object/public/project-images/dbkbeauty-1773884278740.png",
+     "thumb_url": "https://lnkalazscpbefxiqgsct.supabase.co/storage/v1/object/public/project-images/dbkbeauty-1773884278740.png",
+     "width": 1440,
+     "height": 900,
+     "alt": "DBKBeauty screenshot",
+     "sort": 0
+    }
+   ],
+   "created_at": "2026-03-19T01:41:00.697585+00:00",
+   "updated_at": "2026-03-19T01:41:00.697585+00:00",
+   "published_at": "2026-03-19T01:41:00.697585+00:00"
+  },
+  {
+   "id": 2,
+   "slug": "mrsmartbug",
+   "title": "Mr. Smart Bug",
+   "tagline": "Pest control business website for Harvey's Pest Control, Los Angeles, USA",
+   "summary": "Pest control business website for Harvey's Pest Control, Los Angeles, USA",
+   "category": "Client Websites",
+   "kind": "Client",
+   "client": null,
+   "industry": null,
+   "location": null,
+   "role": "Full-stack developer",
+   "year_start": "2025",
+   "year_end": "2025",
+   "status": "published",
+   "featured": true,
+   "priority": 20,
+   "tech": [
+    "WordPress",
+    "PHP",
+    "CSS",
+    "JavaScript",
+    "SEO"
+   ],
+   "tags": [],
+   "highlights": [
+    "Responsive build",
+    "SEO setup"
+   ],
+   "links": [],
+   "live_url": "https://mrsmartbug.com/",
+   "repo_url": null,
+   "case_study": {
+    "overview": "Sample overview.",
+    "problem": "Sample problem.",
+    "role": "Sample role.",
+    "responsibilities": [
+     "a",
+     "b"
+    ],
+    "features": [
+     "x",
+     "y",
+     "z"
+    ],
+    "architecture": "Browser → nginx → PHP → MySQL",
+    "challenges": [
+     {
+      "challenge": "c",
+      "solution": "s"
+     }
+    ],
+    "results": [
+     "r"
+    ]
+   },
+   "seo_title": null,
+   "seo_description": null,
+   "cover": {
+    "id": 2,
+    "url": "https://ahmadbayrakdar.github.io/images/projects/mrsmartbug.png",
+    "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/mrsmartbug.png",
+    "width": 1440,
+    "height": 900,
+    "alt": "Mr. Smart Bug screenshot",
+    "sort": 0
+   },
+   "gallery": [
+    {
+     "id": 2,
+     "url": "https://ahmadbayrakdar.github.io/images/projects/mrsmartbug.png",
+     "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/mrsmartbug.png",
+     "width": 1440,
+     "height": 900,
+     "alt": "Mr. Smart Bug screenshot",
+     "sort": 0
+    }
+   ],
+   "created_at": "2026-03-12T00:49:42.804304+00:00",
+   "updated_at": "2026-03-12T00:49:42.804304+00:00",
+   "published_at": "2026-03-12T00:49:42.804304+00:00"
+  },
+  {
+   "id": 3,
+   "slug": "khakirealtor",
+   "title": "Khaki Realtor",
+   "tagline": "Real estate website for a realtor, USA",
+   "summary": "Real estate website for a realtor, USA",
+   "category": "Client Websites",
+   "kind": "Client",
+   "client": null,
+   "industry": null,
+   "location": null,
+   "role": "Full-stack developer",
+   "year_start": "2025",
+   "year_end": "2025",
+   "status": "published",
+   "featured": true,
+   "priority": 30,
+   "tech": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "SEO",
+    "Responsive Design"
+   ],
+   "tags": [],
+   "highlights": [
+    "Responsive build",
+    "SEO setup"
+   ],
+   "links": [],
+   "live_url": "https://khakirealtor.monetizerengine.com/",
+   "repo_url": null,
+   "case_study": {
+    "overview": "Sample overview.",
+    "problem": "Sample problem.",
+    "role": "Sample role.",
+    "responsibilities": [
+     "a",
+     "b"
+    ],
+    "features": [
+     "x",
+     "y",
+     "z"
+    ],
+    "architecture": "Browser → nginx → PHP → MySQL",
+    "challenges": [
+     {
+      "challenge": "c",
+      "solution": "s"
+     }
+    ],
+    "results": [
+     "r"
+    ]
+   },
+   "seo_title": null,
+   "seo_description": null,
+   "cover": {
+    "id": 3,
+    "url": "https://ahmadbayrakdar.github.io/images/projects/khakirealtor.png",
+    "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/khakirealtor.png",
+    "width": 1440,
+    "height": 900,
+    "alt": "Khaki Realtor screenshot",
+    "sort": 0
+   },
+   "gallery": [
+    {
+     "id": 3,
+     "url": "https://ahmadbayrakdar.github.io/images/projects/khakirealtor.png",
+     "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/khakirealtor.png",
+     "width": 1440,
+     "height": 900,
+     "alt": "Khaki Realtor screenshot",
+     "sort": 0
+    }
+   ],
+   "created_at": "2026-03-12T00:49:42.804304+00:00",
+   "updated_at": "2026-03-12T00:49:42.804304+00:00",
+   "published_at": "2026-03-12T00:49:42.804304+00:00"
+  },
+  {
+   "id": 4,
+   "slug": "serenityjclinic",
+   "title": "Serenity J Clinic",
+   "tagline": "Rehab & wellness spa website, Rancho Cucamonga, USA",
+   "summary": "Rehab & wellness spa website, Rancho Cucamonga, USA",
+   "category": "Client Websites",
+   "kind": "Client",
+   "client": null,
+   "industry": null,
+   "location": null,
+   "role": "Full-stack developer",
+   "year_start": "2024",
+   "year_end": "2024",
+   "status": "published",
+   "featured": true,
+   "priority": 40,
+   "tech": [
+    "WordPress",
+    "CSS",
+    "JavaScript",
+    "SEO",
+    "Booking System"
+   ],
+   "tags": [],
+   "highlights": [
+    "Responsive build",
+    "SEO setup"
+   ],
+   "links": [],
+   "live_url": "https://serenityjclinic.com/",
+   "repo_url": null,
+   "case_study": {
+    "overview": "Sample overview.",
+    "problem": "Sample problem.",
+    "role": "Sample role.",
+    "responsibilities": [
+     "a",
+     "b"
+    ],
+    "features": [
+     "x",
+     "y",
+     "z"
+    ],
+    "architecture": "Browser → nginx → PHP → MySQL",
+    "challenges": [
+     {
+      "challenge": "c",
+      "solution": "s"
+     }
+    ],
+    "results": [
+     "r"
+    ]
+   },
+   "seo_title": null,
+   "seo_description": null,
+   "cover": {
+    "id": 4,
+    "url": "https://ahmadbayrakdar.github.io/images/projects/serenityjclinic.png",
+    "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/serenityjclinic.png",
+    "width": 1440,
+    "height": 900,
+    "alt": "Serenity J Clinic screenshot",
+    "sort": 0
+   },
+   "gallery": [
+    {
+     "id": 4,
+     "url": "https://ahmadbayrakdar.github.io/images/projects/serenityjclinic.png",
+     "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/serenityjclinic.png",
+     "width": 1440,
+     "height": 900,
+     "alt": "Serenity J Clinic screenshot",
+     "sort": 0
+    }
+   ],
+   "created_at": "2026-03-12T00:49:42.804304+00:00",
+   "updated_at": "2026-03-12T00:49:42.804304+00:00",
+   "published_at": "2026-03-12T00:49:42.804304+00:00"
+  },
+  {
+   "id": 5,
+   "slug": "ilonarstyle",
+   "title": "IlonaR Style",
+   "tagline": "Hair salon website with appointment booking, Los Angeles, USA",
+   "summary": "Hair salon website with appointment booking, Los Angeles, USA",
+   "category": "Client Websites",
+   "kind": "Client",
+   "client": null,
+   "industry": null,
+   "location": null,
+   "role": "Full-stack developer",
+   "year_start": "2024",
+   "year_end": "2024",
+   "status": "published",
+   "featured": false,
+   "priority": 50,
+   "tech": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "SEO",
+    "Booking System"
+   ],
+   "tags": [],
+   "highlights": [],
+   "links": [],
+   "live_url": "https://ilonarstyle.monetizerengine.com/",
+   "repo_url": null,
+   "case_study": {},
+   "seo_title": null,
+   "seo_description": null,
+   "cover": {
+    "id": 5,
+    "url": "https://ahmadbayrakdar.github.io/images/projects/ilonarstyle.png",
+    "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/ilonarstyle.png",
+    "width": 1440,
+    "height": 900,
+    "alt": "IlonaR Style screenshot",
+    "sort": 0
+   },
+   "gallery": [
+    {
+     "id": 5,
+     "url": "https://ahmadbayrakdar.github.io/images/projects/ilonarstyle.png",
+     "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/ilonarstyle.png",
+     "width": 1440,
+     "height": 900,
+     "alt": "IlonaR Style screenshot",
+     "sort": 0
+    }
+   ],
+   "created_at": "2026-03-12T00:49:42.804304+00:00",
+   "updated_at": "2026-03-12T00:49:42.804304+00:00",
+   "published_at": "2026-03-12T00:49:42.804304+00:00"
+  },
+  {
+   "id": 6,
+   "slug": "monetizerengine",
+   "title": "Monetizer Engine",
+   "tagline": "AI-powered marketing and sales platform, USA",
+   "summary": "AI-powered marketing and sales platform, USA",
+   "category": "Client Websites",
+   "kind": "Client",
+   "client": null,
+   "industry": null,
+   "location": null,
+   "role": "Full-stack developer",
+   "year_start": "2024",
+   "year_end": "2024",
+   "status": "published",
+   "featured": false,
+   "priority": 60,
+   "tech": [
+    "WordPress",
+    "PHP",
+    "CSS",
+    "JavaScript",
+    "SEO",
+    "AI"
+   ],
+   "tags": [],
+   "highlights": [],
+   "links": [],
+   "live_url": "https://monetizerengine.com/",
+   "repo_url": null,
+   "case_study": {},
+   "seo_title": null,
+   "seo_description": null,
+   "cover": {
+    "id": 6,
+    "url": "https://ahmadbayrakdar.github.io/images/projects/monetizerengine.png",
+    "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/monetizerengine.png",
+    "width": 1440,
+    "height": 900,
+    "alt": "Monetizer Engine screenshot",
+    "sort": 0
+   },
+   "gallery": [
+    {
+     "id": 6,
+     "url": "https://ahmadbayrakdar.github.io/images/projects/monetizerengine.png",
+     "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/monetizerengine.png",
+     "width": 1440,
+     "height": 900,
+     "alt": "Monetizer Engine screenshot",
+     "sort": 0
+    }
+   ],
+   "created_at": "2026-03-12T00:49:42.804304+00:00",
+   "updated_at": "2026-03-12T00:49:42.804304+00:00",
+   "published_at": "2026-03-12T00:49:42.804304+00:00"
+  },
+  {
+   "id": 7,
+   "slug": "monetizetalks",
+   "title": "Monetize Talks",
+   "tagline": "Mastermind networking event platform, Beverly Hills, USA",
+   "summary": "Mastermind networking event platform, Beverly Hills, USA",
+   "category": "Client Websites",
+   "kind": "Client",
+   "client": null,
+   "industry": null,
+   "location": null,
+   "role": "Full-stack developer",
+   "year_start": "2024",
+   "year_end": "2024",
+   "status": "published",
+   "featured": false,
+   "priority": 70,
+   "tech": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "SEO",
+    "Event Platform"
+   ],
+   "tags": [],
+   "highlights": [],
+   "links": [],
+   "live_url": "https://monetizetalks.com/",
+   "repo_url": null,
+   "case_study": {},
+   "seo_title": null,
+   "seo_description": null,
+   "cover": {
+    "id": 7,
+    "url": "https://ahmadbayrakdar.github.io/images/projects/monetizetalks.png",
+    "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/monetizetalks.png",
+    "width": 1440,
+    "height": 900,
+    "alt": "Monetize Talks screenshot",
+    "sort": 0
+   },
+   "gallery": [
+    {
+     "id": 7,
+     "url": "https://ahmadbayrakdar.github.io/images/projects/monetizetalks.png",
+     "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/monetizetalks.png",
+     "width": 1440,
+     "height": 900,
+     "alt": "Monetize Talks screenshot",
+     "sort": 0
+    }
+   ],
+   "created_at": "2026-03-12T00:49:42.804304+00:00",
+   "updated_at": "2026-03-12T00:49:42.804304+00:00",
+   "published_at": "2026-03-12T00:49:42.804304+00:00"
+  },
+  {
+   "id": 8,
+   "slug": "prodigychirocare",
+   "title": "Prodigy Chirocare",
+   "tagline": "Chiropractic care & pain relief clinic website, Los Angeles, USA",
+   "summary": "Chiropractic care & pain relief clinic website, Los Angeles, USA",
+   "category": "Client Websites",
+   "kind": "Client",
+   "client": null,
+   "industry": null,
+   "location": null,
+   "role": "Full-stack developer",
+   "year_start": "2024",
+   "year_end": "2024",
+   "status": "published",
+   "featured": false,
+   "priority": 80,
+   "tech": [
+    "WordPress",
+    "CSS",
+    "JavaScript",
+    "SEO",
+    "Booking System"
+   ],
+   "tags": [],
+   "highlights": [],
+   "links": [],
+   "live_url": "http://prodigychirocare.com/",
+   "repo_url": null,
+   "case_study": {},
+   "seo_title": null,
+   "seo_description": null,
+   "cover": {
+    "id": 8,
+    "url": "https://ahmadbayrakdar.github.io/images/projects/prodigychirocare.png",
+    "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/prodigychirocare.png",
+    "width": 1440,
+    "height": 900,
+    "alt": "Prodigy Chirocare screenshot",
+    "sort": 0
+   },
+   "gallery": [
+    {
+     "id": 8,
+     "url": "https://ahmadbayrakdar.github.io/images/projects/prodigychirocare.png",
+     "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/prodigychirocare.png",
+     "width": 1440,
+     "height": 900,
+     "alt": "Prodigy Chirocare screenshot",
+     "sort": 0
+    }
+   ],
+   "created_at": "2026-03-12T00:49:42.804304+00:00",
+   "updated_at": "2026-03-12T00:49:42.804304+00:00",
+   "published_at": "2026-03-12T00:49:42.804304+00:00"
+  },
+  {
+   "id": 9,
+   "slug": "davidrivero",
+   "title": "David Rivero",
+   "tagline": "Business website for an entrepreneur, USA",
+   "summary": "Business website for an entrepreneur, USA",
+   "category": "Client Websites",
+   "kind": "Client",
+   "client": null,
+   "industry": null,
+   "location": null,
+   "role": "Full-stack developer",
+   "year_start": "2024",
+   "year_end": "2024",
+   "status": "published",
+   "featured": false,
+   "priority": 90,
+   "tech": [
+    "PHP",
+    "CSS",
+    "JavaScript",
+    "SEO"
+   ],
+   "tags": [],
+   "highlights": [],
+   "links": [],
+   "live_url": "https://davidrivero.com/",
+   "repo_url": null,
+   "case_study": {},
+   "seo_title": null,
+   "seo_description": null,
+   "cover": {
+    "id": 9,
+    "url": "https://ahmadbayrakdar.github.io/images/projects/davidrivero-new.png",
+    "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/davidrivero-new.png",
+    "width": 1440,
+    "height": 900,
+    "alt": "David Rivero screenshot",
+    "sort": 0
+   },
+   "gallery": [
+    {
+     "id": 9,
+     "url": "https://ahmadbayrakdar.github.io/images/projects/davidrivero-new.png",
+     "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/davidrivero-new.png",
+     "width": 1440,
+     "height": 900,
+     "alt": "David Rivero screenshot",
+     "sort": 0
+    }
+   ],
+   "created_at": "2026-03-12T00:49:42.804304+00:00",
+   "updated_at": "2026-03-12T00:49:42.804304+00:00",
+   "published_at": "2026-03-12T00:49:42.804304+00:00"
+  },
+  {
+   "id": 10,
+   "slug": "thegrowthtalks",
+   "title": "The Growth Talks",
+   "tagline": "Event website for business networking, USA",
+   "summary": "Event website for business networking, USA",
+   "category": "Client Websites",
+   "kind": "Client",
+   "client": null,
+   "industry": null,
+   "location": null,
+   "role": "Full-stack developer",
+   "year_start": "2023",
+   "year_end": "2023",
+   "status": "published",
+   "featured": false,
+   "priority": 100,
+   "tech": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "SEO"
+   ],
+   "tags": [],
+   "highlights": [],
+   "links": [],
+   "live_url": null,
+   "repo_url": null,
+   "case_study": {},
+   "seo_title": null,
+   "seo_description": null,
+   "cover": {
+    "id": 10,
+    "url": "https://ahmadbayrakdar.github.io/images/projects/thegrowthtalks.png",
+    "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/thegrowthtalks.png",
+    "width": 1440,
+    "height": 900,
+    "alt": "The Growth Talks screenshot",
+    "sort": 0
+   },
+   "gallery": [
+    {
+     "id": 10,
+     "url": "https://ahmadbayrakdar.github.io/images/projects/thegrowthtalks.png",
+     "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/thegrowthtalks.png",
+     "width": 1440,
+     "height": 900,
+     "alt": "The Growth Talks screenshot",
+     "sort": 0
+    }
+   ],
+   "created_at": "2026-03-12T00:49:42.804304+00:00",
+   "updated_at": "2026-03-12T00:49:42.804304+00:00",
+   "published_at": "2026-03-12T00:49:42.804304+00:00"
+  },
+  {
+   "id": 11,
+   "slug": "shrubhub",
+   "title": "ShrubHub",
+   "tagline": "3D landscape design company website, USA",
+   "summary": "3D landscape design company website, USA",
+   "category": "Client Websites",
+   "kind": "Client",
+   "client": null,
+   "industry": null,
+   "location": null,
+   "role": "Full-stack developer",
+   "year_start": "2023",
+   "year_end": "2023",
+   "status": "published",
+   "featured": false,
+   "priority": 110,
+   "tech": [
+    "PHP",
+    "CSS",
+    "JavaScript",
+    "SEO"
+   ],
+   "tags": [],
+   "highlights": [],
+   "links": [],
+   "live_url": "https://www.shrubhub.com/c/",
+   "repo_url": null,
+   "case_study": {},
+   "seo_title": null,
+   "seo_description": null,
+   "cover": {
+    "id": 11,
+    "url": "https://ahmadbayrakdar.github.io/images/projects/shrubhub-new.png",
+    "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/shrubhub-new.png",
+    "width": 1440,
+    "height": 900,
+    "alt": "ShrubHub screenshot",
+    "sort": 0
+   },
+   "gallery": [
+    {
+     "id": 11,
+     "url": "https://ahmadbayrakdar.github.io/images/projects/shrubhub-new.png",
+     "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/shrubhub-new.png",
+     "width": 1440,
+     "height": 900,
+     "alt": "ShrubHub screenshot",
+     "sort": 0
+    }
+   ],
+   "created_at": "2026-03-12T00:49:42.804304+00:00",
+   "updated_at": "2026-03-12T00:49:42.804304+00:00",
+   "published_at": "2026-03-12T00:49:42.804304+00:00"
+  },
+  {
+   "id": 12,
+   "slug": "bigmedia",
+   "title": "BigMedia",
+   "tagline": "Agency website for a company in Dubai, UAE",
+   "summary": "Agency website for a company in Dubai, UAE",
+   "category": "Client Websites",
+   "kind": "Client",
+   "client": null,
+   "industry": null,
+   "location": null,
+   "role": "Full-stack developer",
+   "year_start": "2023",
+   "year_end": "2023",
+   "status": "published",
+   "featured": false,
+   "priority": 120,
+   "tech": [
+    "React",
+    "SCSS",
+    "JavaScript",
+    "jQuery",
+    "GSAP"
+   ],
+   "tags": [],
+   "highlights": [],
+   "links": [],
+   "live_url": null,
+   "repo_url": null,
+   "case_study": {},
+   "seo_title": null,
+   "seo_description": null,
+   "cover": {
+    "id": 12,
+    "url": "https://ahmadbayrakdar.github.io/images/projects/bigmedia.png",
+    "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/bigmedia.png",
+    "width": 1440,
+    "height": 900,
+    "alt": "BigMedia screenshot",
+    "sort": 0
+   },
+   "gallery": [
+    {
+     "id": 12,
+     "url": "https://ahmadbayrakdar.github.io/images/projects/bigmedia.png",
+     "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/bigmedia.png",
+     "width": 1440,
+     "height": 900,
+     "alt": "BigMedia screenshot",
+     "sort": 0
+    }
+   ],
+   "created_at": "2026-03-12T00:49:42.804304+00:00",
+   "updated_at": "2026-03-12T00:49:42.804304+00:00",
+   "published_at": "2026-03-12T00:49:42.804304+00:00"
+  },
+  {
+   "id": 13,
+   "slug": "ranemyatakan",
+   "title": "Ranem Yatakan",
+   "tagline": "E-Booking system for a life coach, UK",
+   "summary": "E-Booking system for a life coach, UK",
+   "category": "Client Websites",
+   "kind": "Client",
+   "client": null,
+   "industry": null,
+   "location": null,
+   "role": "Full-stack developer",
+   "year_start": "2023",
+   "year_end": "2023",
+   "status": "published",
+   "featured": false,
+   "priority": 130,
+   "tech": [
+    "React",
+    "Next.js",
+    "MUI",
+    "TypeScript"
+   ],
+   "tags": [],
+   "highlights": [],
+   "links": [],
+   "live_url": null,
+   "repo_url": null,
+   "case_study": {},
+   "seo_title": null,
+   "seo_description": null,
+   "cover": {
+    "id": 13,
+    "url": "https://ahmadbayrakdar.github.io/images/projects/ranem-yatakan.png",
+    "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/ranem-yatakan.png",
+    "width": 1440,
+    "height": 900,
+    "alt": "Ranem Yatakan screenshot",
+    "sort": 0
+   },
+   "gallery": [
+    {
+     "id": 13,
+     "url": "https://ahmadbayrakdar.github.io/images/projects/ranem-yatakan.png",
+     "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/ranem-yatakan.png",
+     "width": 1440,
+     "height": 900,
+     "alt": "Ranem Yatakan screenshot",
+     "sort": 0
+    }
+   ],
+   "created_at": "2026-03-12T00:49:42.804304+00:00",
+   "updated_at": "2026-03-12T00:49:42.804304+00:00",
+   "published_at": "2026-03-12T00:49:42.804304+00:00"
+  },
+  {
+   "id": 14,
+   "slug": "myportfolio",
+   "title": "My Portfolio (2024)",
+   "tagline": "Personal portfolio website (previous version)",
+   "summary": "Personal portfolio website (previous version)",
+   "category": "Client Websites",
+   "kind": "Client",
+   "client": null,
+   "industry": null,
+   "location": null,
+   "role": "Full-stack developer",
+   "year_start": "2024",
+   "year_end": "2024",
+   "status": "published",
+   "featured": false,
+   "priority": 140,
+   "tech": [
+    "Angular Universal",
+    "SCSS",
+    "Google Analytics",
+    "SSR"
+   ],
+   "tags": [],
+   "highlights": [],
+   "links": [],
+   "live_url": null,
+   "repo_url": null,
+   "case_study": {},
+   "seo_title": null,
+   "seo_description": null,
+   "cover": {
+    "id": 14,
+    "url": "https://ahmadbayrakdar.github.io/images/projects/my-portfolio.png",
+    "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/my-portfolio.png",
+    "width": 1440,
+    "height": 900,
+    "alt": "My Portfolio (2024) screenshot",
+    "sort": 0
+   },
+   "gallery": [
+    {
+     "id": 14,
+     "url": "https://ahmadbayrakdar.github.io/images/projects/my-portfolio.png",
+     "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/my-portfolio.png",
+     "width": 1440,
+     "height": 900,
+     "alt": "My Portfolio (2024) screenshot",
+     "sort": 0
+    }
+   ],
+   "created_at": "2026-03-12T00:49:42.804304+00:00",
+   "updated_at": "2026-03-12T00:49:42.804304+00:00",
+   "published_at": "2026-03-12T00:49:42.804304+00:00"
+  },
+  {
+   "id": 15,
+   "slug": "snaacademy",
+   "title": "Sna Academy",
+   "tagline": "E-Learning system for an academy, Saudi Arabia",
+   "summary": "E-Learning system for an academy, Saudi Arabia",
+   "category": "Client Websites",
+   "kind": "Client",
+   "client": null,
+   "industry": null,
+   "location": null,
+   "role": "Full-stack developer",
+   "year_start": "2023",
+   "year_end": "2023",
+   "status": "published",
+   "featured": false,
+   "priority": 150,
+   "tech": [
+    "PHP",
+    "Laravel",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "jQuery"
+   ],
+   "tags": [],
+   "highlights": [],
+   "links": [],
+   "live_url": null,
+   "repo_url": null,
+   "case_study": {},
+   "seo_title": null,
+   "seo_description": null,
+   "cover": {
+    "id": 15,
+    "url": "https://ahmadbayrakdar.github.io/images/projects/sna-academy.png",
+    "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/sna-academy.png",
+    "width": 1440,
+    "height": 900,
+    "alt": "Sna Academy screenshot",
+    "sort": 0
+   },
+   "gallery": [
+    {
+     "id": 15,
+     "url": "https://ahmadbayrakdar.github.io/images/projects/sna-academy.png",
+     "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/sna-academy.png",
+     "width": 1440,
+     "height": 900,
+     "alt": "Sna Academy screenshot",
+     "sort": 0
+    }
+   ],
+   "created_at": "2026-03-12T00:49:42.804304+00:00",
+   "updated_at": "2026-03-12T00:49:42.804304+00:00",
+   "published_at": "2026-03-12T00:49:42.804304+00:00"
+  },
+  {
+   "id": 16,
+   "slug": "proitx",
+   "title": "Proitx",
+   "tagline": "Agency website for a tech company in Dubai, UAE",
+   "summary": "Agency website for a tech company in Dubai, UAE",
+   "category": "Client Websites",
+   "kind": "Client",
+   "client": null,
+   "industry": null,
+   "location": null,
+   "role": "Full-stack developer",
+   "year_start": "2023",
+   "year_end": "2023",
+   "status": "published",
+   "featured": false,
+   "priority": 160,
+   "tech": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "jQuery",
+    "Bootstrap",
+    "Google Analytics"
+   ],
+   "tags": [],
+   "highlights": [],
+   "links": [],
+   "live_url": "https://proitx.com/",
+   "repo_url": null,
+   "case_study": {},
+   "seo_title": null,
+   "seo_description": null,
+   "cover": {
+    "id": 16,
+    "url": "https://ahmadbayrakdar.github.io/images/projects/proitx-new.png",
+    "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/proitx-new.png",
+    "width": 1440,
+    "height": 900,
+    "alt": "Proitx screenshot",
+    "sort": 0
+   },
+   "gallery": [
+    {
+     "id": 16,
+     "url": "https://ahmadbayrakdar.github.io/images/projects/proitx-new.png",
+     "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/proitx-new.png",
+     "width": 1440,
+     "height": 900,
+     "alt": "Proitx screenshot",
+     "sort": 0
+    }
+   ],
+   "created_at": "2026-03-12T00:49:42.804304+00:00",
+   "updated_at": "2026-03-12T00:49:42.804304+00:00",
+   "published_at": "2026-03-12T00:49:42.804304+00:00"
+  },
+  {
+   "id": 17,
+   "slug": "afaqlms",
+   "title": "Afaq LMS",
+   "tagline": "E-Learning system for a health education academy, Saudi Arabia",
+   "summary": "E-Learning system for a health education academy, Saudi Arabia",
+   "category": "Client Websites",
+   "kind": "Client",
+   "client": null,
+   "industry": null,
+   "location": null,
+   "role": "Full-stack developer",
+   "year_start": "2023",
+   "year_end": "2023",
+   "status": "published",
+   "featured": false,
+   "priority": 170,
+   "tech": [
+    "PHP",
+    "Laravel",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "jQuery"
+   ],
+   "tags": [],
+   "highlights": [],
+   "links": [],
+   "live_url": "https://afaq-lms.com/ar/homepage",
+   "repo_url": null,
+   "case_study": {},
+   "seo_title": null,
+   "seo_description": null,
+   "cover": {
+    "id": 17,
+    "url": "https://ahmadbayrakdar.github.io/images/projects/afaq-lms-new.png",
+    "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/afaq-lms-new.png",
+    "width": 1440,
+    "height": 900,
+    "alt": "Afaq LMS screenshot",
+    "sort": 0
+   },
+   "gallery": [
+    {
+     "id": 17,
+     "url": "https://ahmadbayrakdar.github.io/images/projects/afaq-lms-new.png",
+     "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/afaq-lms-new.png",
+     "width": 1440,
+     "height": 900,
+     "alt": "Afaq LMS screenshot",
+     "sort": 0
+    }
+   ],
+   "created_at": "2026-03-12T00:49:42.804304+00:00",
+   "updated_at": "2026-03-12T00:49:42.804304+00:00",
+   "published_at": "2026-03-12T00:49:42.804304+00:00"
+  },
+  {
+   "id": 18,
+   "slug": "afaqstaffbadge",
+   "title": "Afaq Staff Badge",
+   "tagline": "Dynamic ID badge generator for Afaq staff, Saudi Arabia",
+   "summary": "Dynamic ID badge generator for Afaq staff, Saudi Arabia",
+   "category": "Client Websites",
+   "kind": "Client",
+   "client": null,
+   "industry": null,
+   "location": null,
+   "role": "Full-stack developer",
+   "year_start": "2023",
+   "year_end": "2023",
+   "status": "published",
+   "featured": false,
+   "priority": 180,
+   "tech": [
+    "HTML",
+    "CSS"
+   ],
+   "tags": [],
+   "highlights": [],
+   "links": [],
+   "live_url": null,
+   "repo_url": null,
+   "case_study": {},
+   "seo_title": null,
+   "seo_description": null,
+   "cover": {
+    "id": 18,
+    "url": "https://ahmadbayrakdar.github.io/images/projects/afaq-staff-badge.png",
+    "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/afaq-staff-badge.png",
+    "width": 1440,
+    "height": 900,
+    "alt": "Afaq Staff Badge screenshot",
+    "sort": 0
+   },
+   "gallery": [
+    {
+     "id": 18,
+     "url": "https://ahmadbayrakdar.github.io/images/projects/afaq-staff-badge.png",
+     "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/afaq-staff-badge.png",
+     "width": 1440,
+     "height": 900,
+     "alt": "Afaq Staff Badge screenshot",
+     "sort": 0
+    }
+   ],
+   "created_at": "2026-03-12T00:49:42.804304+00:00",
+   "updated_at": "2026-03-12T00:49:42.804304+00:00",
+   "published_at": "2026-03-12T00:49:42.804304+00:00"
+  },
+  {
+   "id": 19,
+   "slug": "evntoo",
+   "title": "Evntoo",
+   "tagline": "E-Reservation system for a company, Egypt",
+   "summary": "E-Reservation system for a company, Egypt",
+   "category": "Client Websites",
+   "kind": "Client",
+   "client": null,
+   "industry": null,
+   "location": null,
+   "role": "Full-stack developer",
+   "year_start": "2022",
+   "year_end": "2022",
+   "status": "published",
+   "featured": false,
+   "priority": 190,
+   "tech": [
+    "Angular",
+    "CSS",
+    "JavaScript",
+    "jQuery"
+   ],
+   "tags": [],
+   "highlights": [],
+   "links": [],
+   "live_url": null,
+   "repo_url": null,
+   "case_study": {},
+   "seo_title": null,
+   "seo_description": null,
+   "cover": {
+    "id": 19,
+    "url": "https://ahmadbayrakdar.github.io/images/projects/evntoo.png",
+    "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/evntoo.png",
+    "width": 1440,
+    "height": 900,
+    "alt": "Evntoo screenshot",
+    "sort": 0
+   },
+   "gallery": [
+    {
+     "id": 19,
+     "url": "https://ahmadbayrakdar.github.io/images/projects/evntoo.png",
+     "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/evntoo.png",
+     "width": 1440,
+     "height": 900,
+     "alt": "Evntoo screenshot",
+     "sort": 0
+    }
+   ],
+   "created_at": "2026-03-12T00:49:42.804304+00:00",
+   "updated_at": "2026-03-12T00:49:42.804304+00:00",
+   "published_at": "2026-03-12T00:49:42.804304+00:00"
+  },
+  {
+   "id": 20,
+   "slug": "dmedlab",
+   "title": "DmedLab",
+   "tagline": "Encyclopedia web page for a mobile application, UAE",
+   "summary": "Encyclopedia web page for a mobile application, UAE",
+   "category": "Client Websites",
+   "kind": "Client",
+   "client": null,
+   "industry": null,
+   "location": null,
+   "role": "Full-stack developer",
+   "year_start": "2022",
+   "year_end": "2022",
+   "status": "published",
+   "featured": false,
+   "priority": 200,
+   "tech": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Bootstrap"
+   ],
+   "tags": [],
+   "highlights": [],
+   "links": [],
+   "live_url": null,
+   "repo_url": null,
+   "case_study": {},
+   "seo_title": null,
+   "seo_description": null,
+   "cover": {
+    "id": 20,
+    "url": "https://ahmadbayrakdar.github.io/images/projects/dmedlab.png",
+    "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/dmedlab.png",
+    "width": 1440,
+    "height": 900,
+    "alt": "DmedLab screenshot",
+    "sort": 0
+   },
+   "gallery": [
+    {
+     "id": 20,
+     "url": "https://ahmadbayrakdar.github.io/images/projects/dmedlab.png",
+     "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/dmedlab.png",
+     "width": 1440,
+     "height": 900,
+     "alt": "DmedLab screenshot",
+     "sort": 0
+    }
+   ],
+   "created_at": "2026-03-12T00:49:42.804304+00:00",
+   "updated_at": "2026-03-12T00:49:42.804304+00:00",
+   "published_at": "2026-03-12T00:49:42.804304+00:00"
+  },
+  {
+   "id": 21,
+   "slug": "elmalekfurniture",
+   "title": "Elmalek Furniture",
+   "tagline": "E-Commerce website for a furniture company, Egypt",
+   "summary": "E-Commerce website for a furniture company, Egypt",
+   "category": "Client Websites",
+   "kind": "Client",
+   "client": null,
+   "industry": null,
+   "location": null,
+   "role": "Full-stack developer",
+   "year_start": "2022",
+   "year_end": "2022",
+   "status": "published",
+   "featured": false,
+   "priority": 210,
+   "tech": [
+    "WordPress",
+    "WooCommerce",
+    "Authentication",
+    "JavaScript",
+    "CSS"
+   ],
+   "tags": [],
+   "highlights": [],
+   "links": [],
+   "live_url": null,
+   "repo_url": null,
+   "case_study": {},
+   "seo_title": null,
+   "seo_description": null,
+   "cover": {
+    "id": 21,
+    "url": "https://ahmadbayrakdar.github.io/images/projects/elmalek-furniture.png",
+    "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/elmalek-furniture.png",
+    "width": 1440,
+    "height": 900,
+    "alt": "Elmalek Furniture screenshot",
+    "sort": 0
+   },
+   "gallery": [
+    {
+     "id": 21,
+     "url": "https://ahmadbayrakdar.github.io/images/projects/elmalek-furniture.png",
+     "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/elmalek-furniture.png",
+     "width": 1440,
+     "height": 900,
+     "alt": "Elmalek Furniture screenshot",
+     "sort": 0
+    }
+   ],
+   "created_at": "2026-03-12T00:49:42.804304+00:00",
+   "updated_at": "2026-03-12T00:49:42.804304+00:00",
+   "published_at": "2026-03-12T00:49:42.804304+00:00"
+  },
+  {
+   "id": 22,
+   "slug": "nasnav",
+   "title": "NasNav",
+   "tagline": "Product web page with add to cart functionality, Egypt",
+   "summary": "Product web page with add to cart functionality, Egypt",
+   "category": "Client Websites",
+   "kind": "Client",
+   "client": null,
+   "industry": null,
+   "location": null,
+   "role": "Full-stack developer",
+   "year_start": "2022",
+   "year_end": "2022",
+   "status": "published",
+   "featured": false,
+   "priority": 220,
+   "tech": [
+    "React",
+    "CSS",
+    "JavaScript",
+    "Cookies"
+   ],
+   "tags": [],
+   "highlights": [],
+   "links": [],
+   "live_url": null,
+   "repo_url": null,
+   "case_study": {},
+   "seo_title": null,
+   "seo_description": null,
+   "cover": {
+    "id": 22,
+    "url": "https://ahmadbayrakdar.github.io/images/projects/nasnav.png",
+    "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/nasnav.png",
+    "width": 1440,
+    "height": 900,
+    "alt": "NasNav screenshot",
+    "sort": 0
+   },
+   "gallery": [
+    {
+     "id": 22,
+     "url": "https://ahmadbayrakdar.github.io/images/projects/nasnav.png",
+     "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/nasnav.png",
+     "width": 1440,
+     "height": 900,
+     "alt": "NasNav screenshot",
+     "sort": 0
+    }
+   ],
+   "created_at": "2026-03-12T00:49:42.804304+00:00",
+   "updated_at": "2026-03-12T00:49:42.804304+00:00",
+   "published_at": "2026-03-12T00:49:42.804304+00:00"
+  },
+  {
+   "id": 23,
+   "slug": "proitxold",
+   "title": "Proitx (v1)",
+   "tagline": "First version of agency website for Proitx, UAE",
+   "summary": "First version of agency website for Proitx, UAE",
+   "category": "Client Websites",
+   "kind": "Client",
+   "client": null,
+   "industry": null,
+   "location": null,
+   "role": "Full-stack developer",
+   "year_start": "2021",
+   "year_end": "2021",
+   "status": "published",
+   "featured": false,
+   "priority": 230,
+   "tech": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "jQuery",
+    "Bootstrap",
+    "Animate.css"
+   ],
+   "tags": [],
+   "highlights": [],
+   "links": [],
+   "live_url": null,
+   "repo_url": null,
+   "case_study": {},
+   "seo_title": null,
+   "seo_description": null,
+   "cover": {
+    "id": 23,
+    "url": "https://ahmadbayrakdar.github.io/images/projects/proitx-old.png",
+    "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/proitx-old.png",
+    "width": 1440,
+    "height": 900,
+    "alt": "Proitx (v1) screenshot",
+    "sort": 0
+   },
+   "gallery": [
+    {
+     "id": 23,
+     "url": "https://ahmadbayrakdar.github.io/images/projects/proitx-old.png",
+     "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/proitx-old.png",
+     "width": 1440,
+     "height": 900,
+     "alt": "Proitx (v1) screenshot",
+     "sort": 0
+    }
+   ],
+   "created_at": "2026-03-12T00:49:42.804304+00:00",
+   "updated_at": "2026-03-12T00:49:42.804304+00:00",
+   "published_at": "2026-03-12T00:49:42.804304+00:00"
+  },
+  {
+   "id": 24,
+   "slug": "proitxold2",
+   "title": "Proitx (v2)",
+   "tagline": "Second version of agency website for Proitx, UAE",
+   "summary": "Second version of agency website for Proitx, UAE",
+   "category": "Client Websites",
+   "kind": "Client",
+   "client": null,
+   "industry": null,
+   "location": null,
+   "role": "Full-stack developer",
+   "year_start": "2021",
+   "year_end": "2021",
+   "status": "published",
+   "featured": false,
+   "priority": 240,
+   "tech": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Bootstrap",
+    "FullPage.js"
+   ],
+   "tags": [],
+   "highlights": [],
+   "links": [],
+   "live_url": null,
+   "repo_url": null,
+   "case_study": {},
+   "seo_title": null,
+   "seo_description": null,
+   "cover": {
+    "id": 24,
+    "url": "https://ahmadbayrakdar.github.io/images/projects/proitx-old-2.png",
+    "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/proitx-old-2.png",
+    "width": 1440,
+    "height": 900,
+    "alt": "Proitx (v2) screenshot",
+    "sort": 0
+   },
+   "gallery": [
+    {
+     "id": 24,
+     "url": "https://ahmadbayrakdar.github.io/images/projects/proitx-old-2.png",
+     "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/proitx-old-2.png",
+     "width": 1440,
+     "height": 900,
+     "alt": "Proitx (v2) screenshot",
+     "sort": 0
+    }
+   ],
+   "created_at": "2026-03-12T00:49:42.804304+00:00",
+   "updated_at": "2026-03-12T00:49:42.804304+00:00",
+   "published_at": "2026-03-12T00:49:42.804304+00:00"
+  },
+  {
+   "id": 25,
+   "slug": "oldportfolio2023",
+   "title": "Portfolio (2023)",
+   "tagline": "Personal portfolio website, 2023 version",
+   "summary": "Personal portfolio website, 2023 version",
+   "category": "Client Websites",
+   "kind": "Client",
+   "client": null,
+   "industry": null,
+   "location": null,
+   "role": "Full-stack developer",
+   "year_start": "2023",
+   "year_end": "2023",
+   "status": "published",
+   "featured": false,
+   "priority": 250,
+   "tech": [
+    "HTML",
+    "CSS",
+    "CSS Animation",
+    "JavaScript"
+   ],
+   "tags": [],
+   "highlights": [],
+   "links": [],
+   "live_url": null,
+   "repo_url": null,
+   "case_study": {},
+   "seo_title": null,
+   "seo_description": null,
+   "cover": {
+    "id": 25,
+    "url": "https://ahmadbayrakdar.github.io/images/projects/old-portfolio-2023.png",
+    "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/old-portfolio-2023.png",
+    "width": 1440,
+    "height": 900,
+    "alt": "Portfolio (2023) screenshot",
+    "sort": 0
+   },
+   "gallery": [
+    {
+     "id": 25,
+     "url": "https://ahmadbayrakdar.github.io/images/projects/old-portfolio-2023.png",
+     "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/old-portfolio-2023.png",
+     "width": 1440,
+     "height": 900,
+     "alt": "Portfolio (2023) screenshot",
+     "sort": 0
+    }
+   ],
+   "created_at": "2026-03-12T00:49:42.804304+00:00",
+   "updated_at": "2026-03-12T00:49:42.804304+00:00",
+   "published_at": "2026-03-12T00:49:42.804304+00:00"
+  },
+  {
+   "id": 26,
+   "slug": "oldportfolio",
+   "title": "Portfolio (First)",
+   "tagline": "My first personal portfolio website",
+   "summary": "My first personal portfolio website",
+   "category": "Client Websites",
+   "kind": "Client",
+   "client": null,
+   "industry": null,
+   "location": null,
+   "role": "Full-stack developer",
+   "year_start": "2023",
+   "year_end": "2023",
+   "status": "published",
+   "featured": false,
+   "priority": 260,
+   "tech": [
+    "HTML",
+    "CSS",
+    "Animate.css",
+    "Tailwind CSS",
+    "jQuery"
+   ],
+   "tags": [],
+   "highlights": [],
+   "links": [],
+   "live_url": null,
+   "repo_url": null,
+   "case_study": {},
+   "seo_title": null,
+   "seo_description": null,
+   "cover": {
+    "id": 26,
+    "url": "https://ahmadbayrakdar.github.io/images/projects/old-portfolio.png",
+    "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/old-portfolio.png",
+    "width": 1440,
+    "height": 900,
+    "alt": "Portfolio (First) screenshot",
+    "sort": 0
+   },
+   "gallery": [
+    {
+     "id": 26,
+     "url": "https://ahmadbayrakdar.github.io/images/projects/old-portfolio.png",
+     "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/old-portfolio.png",
+     "width": 1440,
+     "height": 900,
+     "alt": "Portfolio (First) screenshot",
+     "sort": 0
+    }
+   ],
+   "created_at": "2026-03-12T00:49:42.804304+00:00",
+   "updated_at": "2026-03-12T00:49:42.804304+00:00",
+   "published_at": "2026-03-12T00:49:42.804304+00:00"
+  },
+  {
+   "id": 27,
+   "slug": "preneom",
+   "title": "Preneom",
+   "tagline": "Landing page for an IT company, UAE",
+   "summary": "Landing page for an IT company, UAE",
+   "category": "Client Websites",
+   "kind": "Client",
+   "client": null,
+   "industry": null,
+   "location": null,
+   "role": "Full-stack developer",
+   "year_start": "2021",
+   "year_end": "2021",
+   "status": "published",
+   "featured": false,
+   "priority": 270,
+   "tech": [
+    "HTML",
+    "CSS"
+   ],
+   "tags": [],
+   "highlights": [],
+   "links": [],
+   "live_url": "https://preneom.com/",
+   "repo_url": null,
+   "case_study": {},
+   "seo_title": null,
+   "seo_description": null,
+   "cover": {
+    "id": 27,
+    "url": "https://ahmadbayrakdar.github.io/images/projects/preneom-new.png",
+    "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/preneom-new.png",
+    "width": 1440,
+    "height": 900,
+    "alt": "Preneom screenshot",
+    "sort": 0
+   },
+   "gallery": [
+    {
+     "id": 27,
+     "url": "https://ahmadbayrakdar.github.io/images/projects/preneom-new.png",
+     "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/preneom-new.png",
+     "width": 1440,
+     "height": 900,
+     "alt": "Preneom screenshot",
+     "sort": 0
+    }
+   ],
+   "created_at": "2026-03-12T00:49:42.804304+00:00",
+   "updated_at": "2026-03-12T00:49:42.804304+00:00",
+   "published_at": "2026-03-12T00:49:42.804304+00:00"
+  },
+  {
+   "id": 28,
+   "slug": "mad",
+   "title": "Mad",
+   "tagline": "Simple webpage — early learning project, Syria",
+   "summary": "Simple webpage — early learning project, Syria",
+   "category": "Client Websites",
+   "kind": "Client",
+   "client": null,
+   "industry": null,
+   "location": null,
+   "role": "Full-stack developer",
+   "year_start": "2020",
+   "year_end": "2020",
+   "status": "published",
+   "featured": false,
+   "priority": 280,
+   "tech": [
+    "HTML",
+    "CSS"
+   ],
+   "tags": [],
+   "highlights": [],
+   "links": [],
+   "live_url": null,
+   "repo_url": null,
+   "case_study": {},
+   "seo_title": null,
+   "seo_description": null,
+   "cover": {
+    "id": 28,
+    "url": "https://ahmadbayrakdar.github.io/images/projects/mad.png",
+    "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/mad.png",
+    "width": 1440,
+    "height": 900,
+    "alt": "Mad screenshot",
+    "sort": 0
+   },
+   "gallery": [
+    {
+     "id": 28,
+     "url": "https://ahmadbayrakdar.github.io/images/projects/mad.png",
+     "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/mad.png",
+     "width": 1440,
+     "height": 900,
+     "alt": "Mad screenshot",
+     "sort": 0
+    }
+   ],
+   "created_at": "2026-03-12T00:49:42.804304+00:00",
+   "updated_at": "2026-03-12T00:49:42.804304+00:00",
+   "published_at": "2026-03-12T00:49:42.804304+00:00"
+  },
+  {
+   "id": 29,
+   "slug": "colouredwebsite",
+   "title": "Coloured Website",
+   "tagline": "Simple webpage — early learning project, Syria",
+   "summary": "Simple webpage — early learning project, Syria",
+   "category": "Client Websites",
+   "kind": "Client",
+   "client": null,
+   "industry": null,
+   "location": null,
+   "role": "Full-stack developer",
+   "year_start": "2020",
+   "year_end": "2020",
+   "status": "published",
+   "featured": false,
+   "priority": 290,
+   "tech": [
+    "HTML",
+    "CSS"
+   ],
+   "tags": [],
+   "highlights": [],
+   "links": [],
+   "live_url": null,
+   "repo_url": null,
+   "case_study": {},
+   "seo_title": null,
+   "seo_description": null,
+   "cover": {
+    "id": 29,
+    "url": "https://ahmadbayrakdar.github.io/images/projects/coloured.png",
+    "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/coloured.png",
+    "width": 1440,
+    "height": 900,
+    "alt": "Coloured Website screenshot",
+    "sort": 0
+   },
+   "gallery": [
+    {
+     "id": 29,
+     "url": "https://ahmadbayrakdar.github.io/images/projects/coloured.png",
+     "thumb_url": "https://ahmadbayrakdar.github.io/images/projects/coloured.png",
+     "width": 1440,
+     "height": 900,
+     "alt": "Coloured Website screenshot",
+     "sort": 0
+    }
+   ],
+   "created_at": "2026-03-12T00:49:42.804304+00:00",
+   "updated_at": "2026-03-12T00:49:42.804304+00:00",
+   "published_at": "2026-03-12T00:49:42.804304+00:00"
+  }
+ ],
+ "generated_at": "2026-10-19T00:00:00Z"
+}

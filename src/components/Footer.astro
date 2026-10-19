@@ -1,0 +1,23 @@
+---
+import type { Profile } from '../lib/types';
+interface Props {
+  profile: Profile;
+}
+const { profile } = Astro.props;
+const year = new Date().getFullYear();
+const links = [
+  profile.github && { label: 'GitHub', href: profile.github },
+  profile.linkedin && { label: 'LinkedIn', href: profile.linkedin },
+  profile.youtube && { label: 'YouTube', href: profile.youtube },
+  profile.resume_url && { label: 'Résumé', href: profile.resume_url },
+].filter(Boolean) as { label: string; href: string }[];
+---
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© {year} {profile.name}. Built with Astro · data served from a self-hosted API.</p>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="/projects/">Projects</a>
+      {links.map((l) => <a href={l.href} rel="noopener" target={l.href.startsWith('http') ? '_blank' : undefined}>{l.label}</a>)}
+    </nav>
+  </div>
+</footer>

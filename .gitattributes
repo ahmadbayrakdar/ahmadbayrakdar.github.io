@@ -1,0 +1,2 @@
+*.sh text eol=lf
+api/deploy/* text eol=lf
