@@ -844,8 +844,13 @@ body.sheet-open {
   }
   .hero-portrait {
     justify-self: start;
-    max-width: 340px;
+    max-width: 280px;
     order: -1;
+  }
+  .now-card {
+    left: 12px;
+    bottom: 12px;
+    max-width: calc(100% - 24px);
   }
   .proof {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -857,19 +862,30 @@ body.sheet-open {
   }
 }
 @media (max-width: 560px) {
+  /* Phones: a small head-and-shoulders thumbnail with the "currently" card beside it. */
   .hero-portrait {
+    display: flex;
+    align-items: center;
+    gap: 16px;
     max-width: 100%;
   }
   .hero-portrait .photo {
-    aspect-ratio: 16 / 11;
+    flex: 0 0 auto;
+    width: 96px;
+    border-radius: 16px;
   }
   .hero-portrait img {
     object-position: 50% 30%;
   }
   .now-card {
-    left: 12px;
-    bottom: 12px;
-    max-width: calc(100% - 24px);
+    position: static;
+    max-width: none;
+    padding: 0;
+    border: 0;
+    background: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    box-shadow: none;
   }
 }
 
