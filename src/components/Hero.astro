@@ -60,17 +60,17 @@ const current = (profile.experience ?? []).find((e) => !e.end) ?? profile.experi
         </dl>
       )}
     </div>
-    <div class="hero-portrait" data-reveal style="--i:2">
+    <div class="hero-portrait">
       <div class="photo">
         <img
-          src="/images/ahmadbayrakdar-900.jpg"
-          srcset="/images/ahmadbayrakdar-900.jpg 898w, /images/ahmadbayrakdar.jpg 1916w"
-          sizes="(min-width: 960px) 420px, 100vw"
-          width="898"
-          height="1200"
+          src="/images/ahmadbayrakdar-720.webp"
+          srcset="/images/ahmadbayrakdar-480.webp 480w, /images/ahmadbayrakdar-720.webp 720w, /images/ahmadbayrakdar-960.webp 960w"
+          sizes="(min-width: 960px) 420px, calc(100vw - 32px)"
+          width="720"
+          height="962"
           alt={`Portrait of ${profile.name}`}
           fetchpriority="high"
-          decoding="async"
+          loading="eager"
         />
       </div>
       {current && (

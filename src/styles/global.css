@@ -266,6 +266,13 @@ h3,
 }
 .section {
   padding-top: var(--section-gap);
+}
+/* Below-the-fold sections skip style/layout until they approach the viewport. */
+.section:not(#work) {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 1200px;
+}
+.section {
   scroll-margin-top: calc(var(--header-h) - 32px);
 }
 .section-head {
