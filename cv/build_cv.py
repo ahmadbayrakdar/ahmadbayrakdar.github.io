@@ -14,7 +14,7 @@ CHROME = os.path.expanduser("~/AppData/Local/ms-playwright/chromium-1234/chrome-
 
 CONTACT = [
     ("Email", "ahmad.bayrakdar.eg@gmail.com", "mailto:ahmad.bayrakdar.eg@gmail.com"),
-    ("WhatsApp", "+20 108 085 7997", "https://wa.me/201080857997"),
+    ("WhatsApp", "+20 155 737 6129", "https://wa.me/201557376129"),
     ("Portfolio", "ahmadbayrakdar.github.io", "https://ahmadbayrakdar.github.io/"),
     ("LinkedIn", "linkedin.com/in/ahmadbayrakdar", "https://www.linkedin.com/in/ahmadbayrakdar/"),
     ("GitHub", "github.com/ahmadbayrakdar", "https://github.com/ahmadbayrakdar"),
