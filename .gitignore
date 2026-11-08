@@ -7,3 +7,4 @@ dist/
 .DS_Store
 /project
 cv/out/
+__pycache__/
