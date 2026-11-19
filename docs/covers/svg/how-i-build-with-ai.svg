@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+<defs><radialGradient id="g" cx="50%" cy="38%" r="55%"><stop offset="0" stop-color="#A99CFF" stop-opacity=".22"/><stop offset="1" stop-color="#A99CFF" stop-opacity="0"/></radialGradient></defs>
+<rect width="100%" height="100%" fill="#0B0D11"/>
+<rect width="100%" height="100%" fill="url(#g)"/>
+<g transform="translate(535.0 250) scale(2.3)" fill="none" stroke="#A99CFF" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="22" r="9"/><circle cx="22" cy="74" r="9"/><circle cx="78" cy="74" r="9"/><circle cx="50" cy="54" r="6" fill="#A99CFF"/><path d="M50 31 v17 M45 58 L29 68 M55 58 L71 68 M31 74 h38"/></g>
+<g transform="translate(835.0 250) scale(2.3)" fill="none" stroke="#A99CFF" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"><path d="M50 10 l8 24 24 8-24 8-8 24-8-24-24-8 24-8z"/><path d="M80 66 l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/></g>
+<text x="800.0" y="630" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="92" letter-spacing="-1.5" fill="#F1F2F4">How I Build with AI</text>
+</svg>

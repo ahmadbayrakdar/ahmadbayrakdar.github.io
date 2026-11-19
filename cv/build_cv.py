@@ -95,11 +95,12 @@ LANGUAGES = "Arabic (native) · English (professional)"
 BASE_SUMMARY = ("Full-stack engineer with 7+ years of shipping production web platforms, business systems and desktop "
                 "apps for companies in the USA, UAE, Saudi Arabia, Germany and Syria. I work across the stack — React, "
                 "Vue and TypeScript front ends; PHP/Laravel, Node.js and Python back ends; MySQL and PostgreSQL — and "
-                "take features from Figma to deployment. I use AI coding tools daily with tests and code review, and "
-                "integrate LLMs (OpenAI, Gemini, Claude) into products.")
+                "take features from Figma to deployment. I build with AI agents daily, under specs, tests and code review, "
+                "run my own multi-agent workspace for engineering and automation, and integrate LLMs (OpenAI, "
+                "Gemini, Claude) into products.")
 
 VARIANTS = {
-    "fullstack": dict(title="Senior Full-Stack Engineer", summary=BASE_SUMMARY,
+    "fullstack": dict(title="Senior Full-Stack Developer · AI Integration & Agents", summary=BASE_SUMMARY,
                       skills=["frontend", "backend", "data", "ai", "devops", "design", "apps"],
                       projects=["marhaba", "builderization", "ahaloop", "emailagent", "portfolio"]),
     "laravel": dict(title="Senior Full-Stack Developer · PHP/Laravel & Vue",

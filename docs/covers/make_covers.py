@@ -75,6 +75,7 @@ COVERS = {
     "ai-stock-metadata": ("photo", "ai", "app", "AI · computer vision", "Metadata AI"),
     "sms-otp-gateway": ("phonecode", "net", "phone", "API · integrations", "OTP Gateway"),
     "livevibely": ("document", "ai", "site", "AI · content engine", "LiveVibely"),
+    "how-i-build-with-ai": ("network", "ai", "app", "AI · agent workspace", "How I Build with AI"),
 }
 
 SANS = "Segoe UI, Arial, sans-serif"
@@ -118,7 +119,7 @@ SECOND = {
     "roseeatelier": "comb", "floridafadez": "comb", "mkbraids": "comb", "sanaasalon": "scissors",
     "tknails": "sparkle", "perfectnails": "sparkle", "queennails": "sparkle", "ryannails": "sparkle",
     "divinenailsandbeauty": "sparkle", "mccleanhomeservices": "sparkle", "redglovecleaningco": "sparkle",
-    "jordanautofl": "wrench", "buyutsyria": "pin", "marhaba-syria": "pin",
+    "jordanautofl": "wrench", "buyutsyria": "pin", "marhaba-syria": "pin", "how-i-build-with-ai": "sparkle",
 }
 
 
